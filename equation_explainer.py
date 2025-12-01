@@ -1,4 +1,5 @@
 import litellm
+import json
 from models import EquationExplanation, EquationModel
 
 class PhysicsEquationExplainer:
@@ -50,19 +51,19 @@ class PhysicsEquationExplainer:
         return explanation
 
     def _build_prompt(self, equation: EquationModel) -> str:
-        """Build a detailed prompt for the LLM"""
+        """Build a detailed prompt for the LLM based on the response model schema"""
         context_info = f"\nContext: {equation.context}" if equation.context else ""
+
+        # Get the response model schema
+        schema = EquationExplanation.model_json_schema()
 
         prompt = f"""Explain the following physics equation in detail:
 
 Equation Name: {equation.name}
 Equation: {equation.equation}{context_info}
 
-Provide a comprehensive explanation with:
-- simple_explanation: A beginner-friendly explanation
-- detailed_explanation: A more technical explanation with deeper insights
-- real_world_example: Practical applications of this equation
-- key_concepts: Important concepts related to this equation"""
+Return the explanation in the following JSON format:
+{json.dumps(schema, indent=2)}"""
 
         return prompt
 
