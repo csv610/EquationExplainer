@@ -8,7 +8,7 @@ import sys
 from equation_explainer import PhysicsEquationExplainer
 
 from models import (
-    ExplanationRequest,
+    EquationModel,
 )
 
 from cli_utils import (
@@ -30,17 +30,16 @@ def explain_equation(args):
         # Initialize explainer
         explainer = PhysicsEquationExplainer()
 
-        # Create request
-        request = ExplanationRequest(
+        # Create equation model
+        equation = EquationModel(
+            name=args.name or args.equation,
             equation=args.equation,
-            equation_name=args.name or args.equation,
             context=args.context,
-            difficulty_level=args.difficulty,
         )
 
         # Explain equation
         print("⏳ Analyzing equation...")
-        explanation = explainer.explain_equation(request)
+        explanation = explainer.explain_equation(equation)
 
         # Display equation info
         print_section("Equation", f"[bold]{explanation.equation_name}[/bold]\n{explanation.equation}")
@@ -111,15 +110,14 @@ def history_equation(args):
 
         explainer = PhysicsEquationExplainer()
 
-        # Create a request to get history info
-        request = ExplanationRequest(
-            equation_name=args.equation_name,
+        # Create equation model to get history info
+        equation = EquationModel(
+            name=args.equation_name,
             equation=args.equation_name,
             context="Provide historical information about this equation including discoverer, year discovered, historical context, and modern applications.",
-            difficulty_level="intermediate",
         )
 
-        explanation = explainer.explain_equation(request)
+        explanation = explainer.explain_equation(equation)
 
         print_section("Equation", f"[bold]{explanation.equation_name}[/bold]\n{explanation.equation}")
 
@@ -157,15 +155,14 @@ def derivation_equation(args):
 
         explainer = PhysicsEquationExplainer()
 
-        # Create a request to get derivation info
-        request = ExplanationRequest(
-            equation_name=args.equation_name,
+        # Create equation model to get derivation info
+        equation = EquationModel(
+            name=args.equation_name,
             equation=args.equation_name,
             context="Provide a detailed mathematical derivation of this equation, including the starting principles, key assumptions, step-by-step derivation steps, and limitations.",
-            difficulty_level="intermediate",
         )
 
-        explanation = explainer.explain_equation(request)
+        explanation = explainer.explain_equation(equation)
 
         print_section("Equation", f"[bold]{explanation.equation_name}[/bold]\n{explanation.equation}")
 
@@ -229,13 +226,12 @@ def comprehensive_equation_analysis(args):
         # 1. Introduction
         print("⏳ Generating introduction...")
         try:
-            request = ExplanationRequest(
+            equation = EquationModel(
+                name=args.equation_name,
                 equation=args.equation_name,
-                equation_name=args.equation_name,
                 context="Provide a comprehensive introduction to this equation, including its overview, significance, and the field of physics it belongs to.",
-                difficulty_level=args.difficulty if hasattr(args, "difficulty") else "intermediate",
             )
-            explanation = explainer.explain_equation(request)
+            explanation = explainer.explain_equation(equation)
             introduction_content = (
                 f"{explanation.simple_explanation}\n\n**Significance:** {explanation.detailed_explanation}"
             )
@@ -246,13 +242,12 @@ def comprehensive_equation_analysis(args):
         # 2. History
         print("⏳ Generating history...")
         try:
-            request = ExplanationRequest(
+            equation = EquationModel(
+                name=args.equation_name,
                 equation=args.equation_name,
-                equation_name=args.equation_name,
                 context="Provide the historical development of this equation, including when it was discovered, who discovered it, and how it evolved.",
-                difficulty_level=args.difficulty if hasattr(args, "difficulty") else "intermediate",
             )
-            explanation = explainer.explain_equation(request)
+            explanation = explainer.explain_equation(equation)
             history_content = f"{explanation.simple_explanation}\n\n{explanation.detailed_explanation}"
             print("✓ History generated")
         except Exception as e:
@@ -261,13 +256,12 @@ def comprehensive_equation_analysis(args):
         # 3. Derivation
         print("⏳ Generating derivation...")
         try:
-            request = ExplanationRequest(
+            equation = EquationModel(
+                name=args.equation_name,
                 equation=args.equation_name,
-                equation_name=args.equation_name,
                 context="Provide a detailed mathematical derivation of this equation, including the starting principles, key assumptions, step-by-step derivation, and limitations.",
-                difficulty_level=args.difficulty if hasattr(args, "difficulty") else "intermediate",
             )
-            explanation = explainer.explain_equation(request)
+            explanation = explainer.explain_equation(equation)
             derivation_content = f"{explanation.simple_explanation}\n\n{explanation.detailed_explanation}"
             print("✓ Derivation generated")
         except Exception as e:
@@ -276,13 +270,12 @@ def comprehensive_equation_analysis(args):
         # 4. Applications
         print("⏳ Generating applications...")
         try:
-            request = ExplanationRequest(
+            equation = EquationModel(
+                name=args.equation_name,
                 equation=args.equation_name,
-                equation_name=args.equation_name,
                 context="Provide modern applications and practical uses of this equation in technology, engineering, and science.",
-                difficulty_level=args.difficulty if hasattr(args, "difficulty") else "intermediate",
             )
-            explanation = explainer.explain_equation(request)
+            explanation = explainer.explain_equation(equation)
             applications_content = f"{explanation.simple_explanation}\n\n{explanation.detailed_explanation}"
             print("✓ Applications generated")
         except Exception as e:

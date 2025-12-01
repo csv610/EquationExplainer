@@ -2,7 +2,7 @@ import litellm
 import json
 import os
 import re
-from models import PhysicsEquation, EquationExplanation, ExplanationRequest
+from models import PhysicsEquation, EquationExplanation, EquationModel
 
 class PhysicsEquationExplainer:
     """LLM-powered physics equation explainer using litellm with Gemini"""
@@ -18,17 +18,17 @@ class PhysicsEquationExplainer:
 
     #       litellm.api_key = os.environ.get("GEMINI_API_KEY")
 
-    def explain_equation(self, request: ExplanationRequest) -> EquationExplanation:
+    def explain_equation(self, equation: EquationModel) -> EquationExplanation:
         """
         Explain a physics equation using Gemini 2.5 Flash via litellm.
 
         Args:
-            request: ExplanationRequest containing equation and context
+            equation: EquationModel containing equation details
 
         Returns:
             EquationExplanation with detailed explanation
         """
-        prompt = self._build_prompt(request)
+        prompt = self._build_prompt(equation)
 
         response = litellm.completion(
             model=self.model,
@@ -43,35 +43,24 @@ class PhysicsEquationExplainer:
         )
 
         content = response.choices[0].message.content
-        explanation_data = self._parse_response(content, request)
+        explanation_data = self._parse_response(content, equation)
 
         return EquationExplanation(**explanation_data)
 
-    def _build_prompt(self, request: ExplanationRequest) -> str:
+    def _build_prompt(self, equation: EquationModel) -> str:
         """Build a detailed prompt for the LLM"""
-        difficulty_guidance = {
-            "beginner": "Use simple language and avoid advanced terminology. Focus on intuition.",
-            "intermediate": "Balance simplicity with technical accuracy. Include mathematical details.",
-            "advanced": "Use precise technical language and advanced concepts. Dive deep into applications.",
-        }
-
-        guidance = difficulty_guidance.get(request.difficulty_level, difficulty_guidance["intermediate"])
-
-        context_info = f"\nContext: {request.context}" if request.context else ""
-        equation_name_info = f"\nEquation Name: {request.equation_name}" if request.equation_name else ""
+        context_info = f"\nContext: {equation.context}" if equation.context else ""
 
         # Get the schema from the EquationExplanation model
         schema = EquationExplanation.model_json_schema()
 
         prompt = f"""Explain the following physics equation in detail:
 
-Equation: {request.equation}{equation_name_info}{context_info}
+Equation Name: {equation.name}
+Equation: {equation.equation}{context_info}
 
 Please provide your response in the following JSON format:
 {json.dumps(schema, indent=2)}
-
-Difficulty Level: {request.difficulty_level}
-Guidance: {guidance}
 
 Return ONLY valid JSON, no additional text."""
 
@@ -92,7 +81,7 @@ Return ONLY valid JSON, no additional text."""
             "Coulomb's Law",
         ]
 
-    def _parse_response(self, content: str, request: ExplanationRequest) -> dict:
+    def _parse_response(self, content: str, equation: EquationModel) -> dict:
         """Parse the LLM response and validate against EquationExplanation model"""
         json_match = re.search(r"```json\n([\s\S]*?)\n```", content)
         json_str = json_match.group(1) if json_match else content
@@ -108,7 +97,7 @@ Return ONLY valid JSON, no additional text."""
             }
 
         return {
-            "equation_name": request.equation_name or "Physics Equation",
-            "equation": request.equation,
+            "equation_name": equation.name,
+            "equation": equation.equation,
             **explanation_data,
         }

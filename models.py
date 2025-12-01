@@ -38,17 +38,6 @@ class EquationExplanation(BaseModel):
     introduction: Optional[IntroductionModel] = Field(None, description="Introduction to the equation")
 
 
-class ExplanationRequest(BaseModel):
-    """Model for requesting an equation explanation"""
-
-    equation: str = Field(..., description="The physics equation to explain")
-    equation_name: Optional[str] = Field(None, description="Name of the equation")
-    context: Optional[str] = Field(None, description="Additional context about the equation")
-    difficulty_level: str = Field(
-        default="intermediate", description="Difficulty level: 'beginner', 'intermediate', or 'advanced'"
-    )
-
-
 class ApplicationModel(BaseModel):
     """Model for modern applications of an equation"""
 
