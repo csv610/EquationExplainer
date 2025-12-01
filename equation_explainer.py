@@ -1,5 +1,4 @@
 import litellm
-import json
 from models import EquationExplanation, EquationModel
 
 class PhysicsEquationExplainer:
@@ -41,8 +40,12 @@ class PhysicsEquationExplainer:
             response_format=EquationExplanation,
         )
 
-        content = response.choices[0].message.content
-        explanation = self._parse_response(content, equation)
+        # Extract parsed response - litellm returns the Pydantic model
+        explanation = response.choices[0].message.parsed
+
+        # Update equation details from input
+        explanation.equation_name = equation.name
+        explanation.equation = equation.equation
 
         return explanation
 
@@ -78,17 +81,3 @@ Provide a comprehensive explanation with:
             "Coulomb's Law",
         ]
 
-    def _parse_response(self, content: str, equation: EquationModel) -> EquationExplanation:
-        """Parse the LLM response and validate using Pydantic"""
-        try:
-            explanation_data = json.loads(content)
-        except json.JSONDecodeError as e:
-            raise ValueError(f"Failed to parse LLM response as JSON: {e}")
-
-        # Update equation details and validate using Pydantic
-        explanation_data.update({
-            "equation_name": equation.name,
-            "equation": equation.equation,
-        })
-
-        return EquationExplanation.model_validate(explanation_data)
