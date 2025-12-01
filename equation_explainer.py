@@ -20,7 +20,7 @@ class PhysicsEquationExplainer:
 
     def explain_equation(self, equation: EquationModel) -> EquationExplanation:
         """
-        Explain a physics equation using Gemini 2.5 Flash via litellm.
+        Explain a physics equation using Gemini 2.5 Flash via litellm with structured output.
 
         Args:
             equation: EquationModel containing equation details
@@ -40,6 +40,11 @@ class PhysicsEquationExplainer:
                 {"role": "user", "content": prompt},
             ],
             temperature=0.7,
+            response_format={"type": "json_schema", "json_schema": {
+                "name": "EquationExplanation",
+                "schema": EquationExplanation.model_json_schema(),
+                "strict": True
+            }},
         )
 
         content = response.choices[0].message.content
@@ -51,18 +56,16 @@ class PhysicsEquationExplainer:
         """Build a detailed prompt for the LLM"""
         context_info = f"\nContext: {equation.context}" if equation.context else ""
 
-        # Get the schema from the EquationExplanation model
-        schema = EquationExplanation.model_json_schema()
-
         prompt = f"""Explain the following physics equation in detail:
 
 Equation Name: {equation.name}
 Equation: {equation.equation}{context_info}
 
-Please provide your response in the following JSON format:
-{json.dumps(schema, indent=2)}
-
-Return ONLY valid JSON, no additional text."""
+Provide a comprehensive explanation with:
+- simple_explanation: A beginner-friendly explanation
+- detailed_explanation: A more technical explanation with deeper insights
+- real_world_example: Practical applications of this equation
+- key_concepts: Important concepts related to this equation"""
 
         return prompt
 
@@ -82,12 +85,9 @@ Return ONLY valid JSON, no additional text."""
         ]
 
     def _parse_response(self, content: str, equation: EquationModel) -> dict:
-        """Parse the LLM response and validate against EquationExplanation model"""
-        json_match = re.search(r"```json\n([\s\S]*?)\n```", content)
-        json_str = json_match.group(1) if json_match else content
-
+        """Parse the LLM response as JSON"""
         try:
-            explanation_data = json.loads(json_str)
+            explanation_data = json.loads(content)
         except json.JSONDecodeError:
             explanation_data = {
                 "simple_explanation": content,
