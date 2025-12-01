@@ -1,8 +1,6 @@
 import litellm
 import json
-import os
-import re
-from models import PhysicsEquation, EquationExplanation, EquationModel
+from models import EquationExplanation, EquationModel
 
 class PhysicsEquationExplainer:
     """LLM-powered physics equation explainer using litellm with Gemini"""
@@ -40,17 +38,13 @@ class PhysicsEquationExplainer:
                 {"role": "user", "content": prompt},
             ],
             temperature=0.7,
-            response_format={"type": "json_schema", "json_schema": {
-                "name": "EquationExplanation",
-                "schema": EquationExplanation.model_json_schema(),
-                "strict": True
-            }},
+            response_format=EquationExplanation,
         )
 
         content = response.choices[0].message.content
-        explanation_data = self._parse_response(content, equation)
+        explanation = self._parse_response(content, equation)
 
-        return EquationExplanation(**explanation_data)
+        return explanation
 
     def _build_prompt(self, equation: EquationModel) -> str:
         """Build a detailed prompt for the LLM"""
@@ -84,20 +78,17 @@ Provide a comprehensive explanation with:
             "Coulomb's Law",
         ]
 
-    def _parse_response(self, content: str, equation: EquationModel) -> dict:
-        """Parse the LLM response as JSON"""
+    def _parse_response(self, content: str, equation: EquationModel) -> EquationExplanation:
+        """Parse the LLM response and validate using Pydantic"""
         try:
             explanation_data = json.loads(content)
-        except json.JSONDecodeError:
-            explanation_data = {
-                "simple_explanation": content,
-                "detailed_explanation": content,
-                "real_world_example": "Example not available",
-                "key_concepts": [],
-            }
+        except json.JSONDecodeError as e:
+            raise ValueError(f"Failed to parse LLM response as JSON: {e}")
 
-        return {
+        # Update equation details and validate using Pydantic
+        explanation_data.update({
             "equation_name": equation.name,
             "equation": equation.equation,
-            **explanation_data,
-        }
+        })
+
+        return EquationExplanation.model_validate(explanation_data)
