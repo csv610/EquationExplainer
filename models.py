@@ -119,6 +119,7 @@ class EquationModel(BaseModel):
 
     name: str = Field(..., description="Name of the equation")
     equation: str = Field(..., description="The equation in LaTeX or plain text format")
+    context: Optional[str] = Field(None, description="Context or area of physics where this applies")
     history: Optional[HistoryModel] = Field(None, description="Historical development of the equation")
     derivation: Optional[DerivationModel] = Field(None, description="Mathematical derivation of the equation")
     applications: Optional[list[ApplicationModel]] = Field(
