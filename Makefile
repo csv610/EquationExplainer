@@ -39,20 +39,20 @@ run:
 	python example.py
 
 lint:
-	@echo "Running flake8 linter..."
-	flake8 cli.py --max-line-length=120
+	@echo "Running ruff linter..."
+	ruff check .
 
 format:
-	@echo "Formatting code with black..."
-	black *.py --line-length=120
+	@echo "Running ruff formatter..."
+	ruff format .
 
 test:
-	@echo "Running pytest..."
-	pytest -v --strict-markers tests/
+	@echo "Running pytest with coverage..."
+	python -m pytest -v --cov --cov-report=term-missing tests/
 
 type-check:
 	@echo "Running mypy type checker..."
-	@mypy cli.py
+	@mypy *.py
 
 setup:
 	@if [ ! -f .env ]; then \
@@ -69,7 +69,7 @@ cli-help:
 	@python cli.py --help
 
 cli-list:
-	@python cli.py list-equations
+	@python cli.py list
 
 cli-explain:
 	@python cli.py explain $(EQUATION)

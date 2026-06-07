@@ -4,7 +4,6 @@ Generates assets/famous_equations.json with 500+ famous equations in LaTeX forma
 import json
 from pathlib import Path
 
-
 EQUATIONS = [
     # === CLASSICAL MECHANICS (1-45) ===
     {"name": "Newton's Second Law", "equation": "F = ma", "context": "Classical mechanics", "variables": {"F": "Net force", "m": "Mass", "a": "Acceleration"}},
