@@ -11,5 +11,5 @@
 - Comprehensive 7-model pydantic response schema with `extra="forbid"`
 - Pre-commit hooks (ruff, mypy, formatting)
 - CI with GitHub Actions (lint, mypy, test matrix across Python 3.10–3.13)
-- Full test suite with 46 tests and 100% core coverage
+- Full test suite with 63 tests and 100% core coverage
 - Makefile targets for common dev tasks

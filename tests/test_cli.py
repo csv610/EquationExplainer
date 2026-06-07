@@ -1,6 +1,55 @@
 """Tests for CLI"""
+import os
+from unittest.mock import patch
 
-from cli import create_parser
+from cli import _format_year, _parse_global_flags, create_parser
+
+
+class TestParseGlobalFlags:
+    def test_defaults(self):
+        args = _parse_global_flags()
+        assert args.difficulty == "intermediate"
+        assert args.model is None
+        assert args.seed is None
+
+    def test_custom_difficulty(self):
+        with patch("sys.argv", ["cli.py", "-d", "beginner", "F = ma"]):
+            args = _parse_global_flags()
+            assert args.difficulty == "beginner"
+
+    def test_custom_model(self):
+        with patch("sys.argv", ["cli.py", "-m", "gpt-4o", "explain", "F = ma"]):
+            args = _parse_global_flags()
+            assert args.model == "gpt-4o"
+
+
+class TestFormatYear:
+    def test_known_year(self):
+        assert _format_year(1687) == "1687"
+
+    def test_none_year(self):
+        assert _format_year(None) == "Unknown"
+
+
+class TestApiKeyCheck:
+    def test_no_warning_for_ollama(self):
+        with patch("cli.os.environ", {}):
+            from cli import _check_api_key
+            _check_api_key("ollama/gemma4")
+
+    def test_warning_when_no_keys_set(self, capsys):
+        with patch("cli.os.environ", {}):
+            from cli import _check_api_key
+            _check_api_key("gpt-4o")
+            captured = capsys.readouterr()
+            assert "No API keys found" in captured.out
+
+    def test_no_warning_when_key_set(self, capsys):
+        with patch.dict(os.environ, {"OPENAI_API_KEY": "sk-test"}):
+            from cli import _check_api_key
+            _check_api_key("gpt-4o")
+            captured = capsys.readouterr()
+            assert captured.out == ""
 
 
 class TestCliParser:

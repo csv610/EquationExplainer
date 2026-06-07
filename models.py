@@ -39,7 +39,9 @@ class ApplicationModel(BaseModel):
 
 class HistoryModel(BaseModel):
     model_config = {"extra": "forbid"}
-    year_discovered: int = Field(..., description="Year the equation was discovered or developed")
+    year_discovered: int | None = Field(
+        None, description="Year discovered (None if unknown or pre-0 CE)"
+    )
     discoverer: str = Field(..., description="Scientist(s) who discovered/developed the equation")
     historical_context: str = Field(..., description="Historical and scientific context of the discovery")
     earlier_related_equations: list[str] | None = Field(

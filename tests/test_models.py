@@ -86,6 +86,14 @@ class TestHistoryModel:
         assert history.earlier_related_equations is None
         assert history.source_citations == []
 
+    def test_year_discovered_none(self):
+        history = HistoryModel(
+            discoverer="Ancient mathematicians",
+            historical_context="Known since antiquity",
+            impact="Foundation of geometry",
+        )
+        assert history.year_discovered is None
+
     def test_create_with_developments(self):
         history = HistoryModel(
             year_discovered=1905,

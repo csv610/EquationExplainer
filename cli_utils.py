@@ -108,6 +108,10 @@ def save_markdown_file(content: str, filename: str) -> str:
     return str(filepath.absolute())
 
 
+def print_text(text: str, style: str = "") -> None:
+    console.print(text, style=style)
+
+
 def print_error(message: str) -> None:
     console.print(
         Panel(
