@@ -21,7 +21,7 @@ class TestPhysicsEquationExplainer:
             name="Newton's Second Law",
             equation="F = ma"
         )
-        prompt = explainer._build_prompt(equation)
+        prompt = explainer._build_prompt(equation, EquationExplanation)
 
         assert "F = ma" in prompt
         assert "Newton's Second Law" in prompt
@@ -35,11 +35,23 @@ class TestPhysicsEquationExplainer:
             equation="F = ma",
             context="Classical mechanics"
         )
-        prompt = explainer._build_prompt(equation)
+        prompt = explainer._build_prompt(equation, EquationExplanation)
 
         assert "F = ma" in prompt
         assert "Newton's Second Law" in prompt
         assert "Classical mechanics" in prompt
+
+    def test_build_prompt_with_difficulty(self):
+        """Test prompt building with difficulty level"""
+        explainer = PhysicsEquationExplainer()
+        equation = EquationModel(
+            name="Newton's Second Law",
+            equation="F = ma",
+            difficulty="beginner"
+        )
+        prompt = explainer._build_prompt(equation, EquationExplanation)
+
+        assert "beginner" in prompt.lower() or "Difficulty" in prompt
 
     def test_build_prompt_includes_schema(self):
         """Test that prompt includes the response model schema"""
@@ -48,9 +60,8 @@ class TestPhysicsEquationExplainer:
             name="Test Equation",
             equation="E = mc²"
         )
-        prompt = explainer._build_prompt(equation)
+        prompt = explainer._build_prompt(equation, EquationExplanation)
 
-        # Should include schema fields from EquationExplanation
         assert "simple_explanation" in prompt
         assert "detailed_explanation" in prompt
         assert "real_world_example" in prompt
@@ -59,7 +70,6 @@ class TestPhysicsEquationExplainer:
     @patch('litellm.completion')
     def test_explain_equation(self, mock_completion):
         """Test the full explain_equation flow"""
-        # Mock the LLM response with parsed Pydantic model
         mock_response = MagicMock()
         mock_explanation = EquationExplanation(
             equation_name="Newton's Second Law",
@@ -105,7 +115,6 @@ class TestPhysicsEquationExplainer:
         equation = EquationModel(name="Test", equation="E = mc²")
         explainer.explain_equation(equation)
 
-        # Verify litellm.completion was called with correct model
         mock_completion.assert_called_once()
         call_args = mock_completion.call_args
         assert call_args[1]['model'] == "gemini/gemini-2.5-flash"
@@ -129,9 +138,62 @@ class TestPhysicsEquationExplainer:
         equation = EquationModel(name="Test", equation="F = ma")
         explainer.explain_equation(equation)
 
-        # Verify response_format is set to EquationExplanation
         call_args = mock_completion.call_args
         assert call_args[1]['response_format'] == EquationExplanation
+
+    @patch('litellm.completion')
+    def test_get_history(self, mock_completion):
+        """Test get_history returns HistoryModel"""
+        from models import HistoryModel
+        mock_response = MagicMock()
+        mock_history = HistoryModel(
+            equation_name="Newton's Second Law",
+            equation="F = ma",
+            year_discovered=1687,
+            discoverer="Isaac Newton",
+            historical_context="Developed during the Scientific Revolution",
+            impact="Foundation of classical mechanics"
+        )
+        mock_response.choices[0].message.parsed = mock_history
+        mock_completion.return_value = mock_response
+
+        explainer = PhysicsEquationExplainer()
+        equation = EquationModel(name="Newton's Second Law", equation="F = ma")
+        history = explainer.get_history(equation)
+
+        assert isinstance(history, HistoryModel)
+        assert history.discoverer == "Isaac Newton"
+        assert history.year_discovered == 1687
+
+    @patch('litellm.completion')
+    def test_get_derivation(self, mock_completion):
+        """Test get_derivation returns DerivationModel"""
+        from models import DerivationModel, DerivationStep
+        mock_response = MagicMock()
+        mock_derivation = DerivationModel(
+            equation_name="Kinetic Energy",
+            equation="KE = (1/2)mv²",
+            starting_principles=["Work-energy theorem"],
+            derivation_steps=[
+                DerivationStep(
+                    step_number=1,
+                    title="Start with work",
+                    description="Work equals force times distance",
+                    mathematical_expression="W = Fd",
+                    reasoning="Definition of work"
+                )
+            ]
+        )
+        mock_response.choices[0].message.parsed = mock_derivation
+        mock_completion.return_value = mock_response
+
+        explainer = PhysicsEquationExplainer()
+        equation = EquationModel(name="Kinetic Energy", equation="KE = (1/2)mv²")
+        derivation = explainer.get_derivation(equation)
+
+        assert isinstance(derivation, DerivationModel)
+        assert len(derivation.derivation_steps) == 1
+        assert derivation.derivation_steps[0].title == "Start with work"
 
     @patch('litellm.completion')
     def test_explain_heat_conduction_equation(self, mock_completion):

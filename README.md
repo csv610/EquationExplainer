@@ -65,16 +65,27 @@ python cli.py explain "E=hf" --difficulty advanced
 Save explanations to a file:
 
 ```bash
-python cli.py explain "v=u+at" --markdown output.md
+python cli.py explain "v=u+at" -m output.md
+```
+
+### History, Derivation, and Full Analysis
+
+```bash
+python cli.py history "Newton's Second Law"
+python cli.py derivation "Schrödinger's Equation"
+python cli.py analyze "E = mc²" -m einstein.md
 ```
 
 ## Project Structure
 
 - `cli.py` - Main CLI interface and command handlers
 - `equation_explainer.py` - Core explainer logic using Gemini API
-- `models.py` - Data models for requests and responses
+- `models.py` - Pydantic data models for requests and responses
 - `cli_utils.py` - Utility functions for formatting and output
+- `__init__.py` - Package initialization
+- `example.py` - Usage examples
 - `requirements.txt` - Python dependencies
+- `Makefile` - Common development tasks
 - `tests/` - Unit tests
 - `.gitignore` - Git ignore rules for Python projects
 
@@ -82,7 +93,9 @@ python cli.py explain "v=u+at" --markdown output.md
 
 - `rich` - Beautiful terminal formatting
 - `litellm` - LLM API abstraction
+- `pydantic` - Data validation and structured output
 - `google-generativeai` - Google Gemini API access
+- `python-dotenv` - Environment variable loading
 
 ## Requirements
 

@@ -22,7 +22,7 @@ def print_header(text: str, subtitle: str = ""):
     console.print(panel)
 
 
-def print_section(title: str, content: str, max_width: int = 70):
+def print_section(title: str, content: str):
     """Print formatted section with consistent spacing"""
     panel = Panel(
         Text(content, justify="left"),
@@ -32,7 +32,7 @@ def print_section(title: str, content: str, max_width: int = 70):
     console.print(panel)
 
 
-def print_subsection(title: str, content: str, max_width: int = 70):
+def print_subsection(title: str, content: str):
     """Print subsection with smaller emphasis"""
     console.print(f"[bold yellow]• {title}[/bold yellow]")
     wrapped = textwrap.fill(content, width=max_width, subsequent_indent="  ")

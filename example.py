@@ -3,18 +3,10 @@ Example usage of the Physics Equation Explainer app with Gemini 2.5 Flash.
 """
 
 from equation_explainer import PhysicsEquationExplainer
-from models import ExplanationRequest
-import os
-from dotenv import load_dotenv
-
-# Load environment variables from .env file
-load_dotenv()
+from models import EquationModel
 
 
 def main():
-    # Initialize the explainer with Gemini 2.5 Flash via litellm
-    # Make sure you have set GOOGLE_API_KEY in environment variables
-    # Get your API key from: https://aistudio.google.com/app/apikey
     explainer = PhysicsEquationExplainer()
 
     # Example 1: Explain Newton's Second Law
@@ -22,53 +14,59 @@ def main():
     print("Example 1: Newton's Second Law")
     print("=" * 60)
 
-    request1 = ExplanationRequest(
+    equation = EquationModel(
+        name="Newton's Second Law",
         equation="F = ma",
-        equation_name="Newton's Second Law",
         context="Classical mechanics",
-        difficulty_level="beginner",
+        difficulty="beginner",
     )
 
-    explanation1 = explainer.explain_equation(request1)
-    print(f"Equation: {explanation1.equation}")
-    print(f"\nSimple Explanation:\n{explanation1.simple_explanation}")
-    print(f"\nDetailed Explanation:\n{explanation1.detailed_explanation}")
-    print(f"\nReal-World Example:\n{explanation1.real_world_example}")
-    print(f"\nKey Concepts: {', '.join(explanation1.key_concepts)}")
+    explanation = explainer.explain_equation(equation)
+    print(f"Equation: {explanation.equation}")
+    print(f"\nSimple Explanation:\n{explanation.simple_explanation}")
+    print(f"\nDetailed Explanation:\n{explanation.detailed_explanation}")
+    print(f"\nReal-World Example:\n{explanation.real_world_example}")
+    print(f"\nKey Concepts: {', '.join(explanation.key_concepts)}")
 
-    # Example 2: Explain Einstein's E=mc²
+    # Example 2: Get historical context for E=mc²
     print("\n" + "=" * 60)
-    print("Example 2: Einstein's Mass-Energy Equivalence")
+    print("Example 2: History of Einstein's Mass-Energy Equivalence")
     print("=" * 60)
 
-    request2 = ExplanationRequest(
+    equation = EquationModel(
+        name="Einstein's Mass-Energy Equivalence",
         equation="E = mc²",
-        equation_name="Einstein's Mass-Energy Equivalence",
         context="Modern physics and relativity",
-        difficulty_level="intermediate",
     )
 
-    explanation2 = explainer.explain_equation(request2)
-    print(f"Equation: {explanation2.equation}")
-    print(f"\nSimple Explanation:\n{explanation2.simple_explanation}")
-    print(f"\nDetailed Explanation:\n{explanation2.detailed_explanation}")
-    print(f"\nReal-World Example:\n{explanation2.real_world_example}")
-    print(f"\nKey Concepts: {', '.join(explanation2.key_concepts)}")
+    history = explainer.get_history(equation)
+    print(f"Equation: {history.equation}")
+    print(f"\nDiscoverer: {history.discoverer} ({history.year_discovered})")
+    print(f"\nHistorical Context:\n{history.historical_context}")
+    print(f"\nImpact:\n{history.impact}")
 
-    # Example 3: Multiple equations
+    # Example 3: Get derivation for a kinematic equation
     print("\n" + "=" * 60)
-    print("Example 3: Multiple Equations")
+    print("Example 3: Derivation of v = u + at")
     print("=" * 60)
 
-    requests = [
-        ExplanationRequest(equation="v = u + at", equation_name="Kinematic Equation", difficulty_level="beginner"),
-        ExplanationRequest(equation="W = Fd cos(θ)", equation_name="Work", difficulty_level="intermediate"),
-    ]
+    equation = EquationModel(
+        name="First Kinematic Equation",
+        equation="v = u + at",
+        context="Constant acceleration kinematics",
+    )
 
-    explanations = explainer.explain_multiple(requests)
-    for exp in explanations:
-        print(f"\n{exp.equation_name}: {exp.equation}")
-        print(f"Simple: {exp.simple_explanation[:100]}...")
+    derivation = explainer.get_derivation(equation)
+    print(f"Equation: {derivation.equation}")
+    print(f"\nStarting Principles:")
+    for p in derivation.starting_principles:
+        print(f"  • {p}")
+    print(f"\nDerivation Steps:")
+    for step in derivation.derivation_steps:
+        print(f"\n  Step {step.step_number}: {step.title}")
+        print(f"  {step.description}")
+        if step.mathematical_expression:
+            print(f"  Expression: {step.mathematical_expression}")
 
 
 if __name__ == "__main__":
