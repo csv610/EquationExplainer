@@ -27,12 +27,12 @@ venv:
 	@echo "Activate with: source mathenv/bin/activate"
 
 install:
-	@echo "Installing dependencies..."
-	pip install -r requirements.txt
+	@echo "Installing package and dependencies..."
+	pip install -e .
 
 install-dev: install
 	@echo "Installing development dependencies..."
-	pip install black flake8 mypy pytest
+	pip install -e ".[dev]"
 
 run:
 	@echo "Running example application..."
@@ -63,16 +63,20 @@ setup:
 		echo ".env already exists"; \
 	fi
 
+type-check:
+	@echo "Running mypy type checker..."
+	@mypy src/matheqs/
+
 cli-help:
 	@echo "MathEqs CLI - Physics Equation Explainer"
 	@echo ""
-	@python cli.py --help
+	@python -m matheqs.cli --help
 
 cli-list:
-	@python cli.py list
+	@python -m matheqs.cli list
 
 cli-explain:
-	@python cli.py explain $(EQUATION)
+	@python -m matheqs.cli explain $(EQUATION)
 
 clean:
 	@echo "Cleaning up cache files..."
@@ -80,3 +84,4 @@ clean:
 	find . -type f -name "*.pyc" -delete
 	find . -type f -name "*.pyo" -delete
 	find . -type d -name .pytest_cache -exec rm -rf {} + 2>/dev/null || true
+	rm -rf src/matheqs/data/__pycache__ 2>/dev/null || true

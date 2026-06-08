@@ -1,6 +1,6 @@
 """Tests for cli_utils"""
 
-from cli_utils import generate_four_section_markdown, generate_markdown_document
+from matheqs.cli_utils import generate_four_section_markdown, generate_markdown_document
 
 
 class TestGenerateMarkdown:

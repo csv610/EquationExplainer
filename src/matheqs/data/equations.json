@@ -1,0 +1,2559 @@
+[
+  {
+    "name": "Newton's Second Law",
+    "equation": "F = ma",
+    "context": "Classical mechanics",
+    "variables": {
+      "F": "Net force",
+      "m": "Mass",
+      "a": "Acceleration"
+    }
+  },
+  {
+    "name": "Newton's Law of Universal Gravitation",
+    "equation": "F = G \\frac{m_1 m_2}{r^2}",
+    "context": "Classical mechanics",
+    "variables": {
+      "F": "Gravitational force",
+      "G": "Gravitational constant",
+      "m_1, m_2": "Masses",
+      "r": "Distance between centers"
+    }
+  },
+  {
+    "name": "Newton's First Law",
+    "equation": "\\sum \\mathbf{F} = 0 \\iff \\frac{d\\mathbf{v}}{dt} = 0",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Newton's Third Law",
+    "equation": "\\mathbf{F}_{12} = -\\mathbf{F}_{21}",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Kinetic Energy",
+    "equation": "\\text{KE} = \\frac{1}{2} m v^2",
+    "context": "Classical mechanics",
+    "variables": {
+      "KE": "Kinetic energy",
+      "m": "Mass",
+      "v": "Velocity"
+    }
+  },
+  {
+    "name": "Gravitational Potential Energy",
+    "equation": "U = mgh",
+    "context": "Classical mechanics",
+    "variables": {
+      "U": "Potential energy",
+      "m": "Mass",
+      "g": "Gravitational acceleration",
+      "h": "Height"
+    }
+  },
+  {
+    "name": "Hooke's Law",
+    "equation": "F = -kx",
+    "context": "Classical mechanics",
+    "variables": {
+      "F": "Restoring force",
+      "k": "Spring constant",
+      "x": "Displacement from equilibrium"
+    }
+  },
+  {
+    "name": "Work-Energy Theorem",
+    "equation": "W = \\Delta \\text{KE}",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Conservation of Momentum",
+    "equation": "m_1 \\mathbf{v}_1 + m_2 \\mathbf{v}_2 = m_1 \\mathbf{v}'_1 + m_2 \\mathbf{v}'_2",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Centripetal Force",
+    "equation": "F_c = \\frac{m v^2}{r}",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Torque",
+    "equation": "\\boldsymbol{\\tau} = \\mathbf{r} \\times \\mathbf{F}",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Angular Momentum",
+    "equation": "\\mathbf{L} = I \\boldsymbol{\\omega}",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Moment of Inertia",
+    "equation": "I = \\sum m_i r_i^2",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Simple Pendulum Period",
+    "equation": "T = 2\\pi \\sqrt{\\frac{L}{g}}",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Spring-Mass Period",
+    "equation": "T = 2\\pi \\sqrt{\\frac{m}{k}}",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Kinematic Equation 1",
+    "equation": "v = u + at",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Kinematic Equation 2",
+    "equation": "s = ut + \\frac{1}{2} a t^2",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Kinematic Equation 3",
+    "equation": "v^2 = u^2 + 2as",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Kinematic Equation 4",
+    "equation": "s = \\frac{1}{2}(u+v)t",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Power",
+    "equation": "P = \\mathbf{F} \\cdot \\mathbf{v}",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Impulse",
+    "equation": "\\mathbf{J} = \\mathbf{F} \\Delta t = \\Delta \\mathbf{p}",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Coefficient of Friction",
+    "equation": "F_f = \\mu N",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Drag Force (Stokes)",
+    "equation": "F_d = 6\\pi \\eta r v",
+    "context": "Fluid mechanics"
+  },
+  {
+    "name": "Quadratic Drag",
+    "equation": "F_d = \\frac{1}{2} \\rho v^2 C_d A",
+    "context": "Fluid mechanics"
+  },
+  {
+    "name": "Damped Oscillation",
+    "equation": "x(t) = A e^{-bt/2m} \\cos(\\omega t + \\phi)",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Simple Harmonic Motion",
+    "equation": "x(t) = A \\cos(\\omega t + \\phi)",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Escape Velocity",
+    "equation": "v_e = \\sqrt{\\frac{2GM}{R}}",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Orbital Velocity",
+    "equation": "v = \\sqrt{\\frac{GM}{r}}",
+    "context": "Celestial mechanics"
+  },
+  {
+    "name": "Kepler's Third Law",
+    "equation": "T^2 \\propto a^3",
+    "context": "Celestial mechanics"
+  },
+  {
+    "name": "Kepler's First Law",
+    "equation": "r = \\frac{a(1-e^2)}{1+e\\cos\\theta}",
+    "context": "Celestial mechanics"
+  },
+  {
+    "name": "Center of Mass",
+    "equation": "\\mathbf{R}_{\\text{cm}} = \\frac{\\sum m_i \\mathbf{r}_i}{\\sum m_i}",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Reduced Mass",
+    "equation": "\\mu = \\frac{m_1 m_2}{m_1 + m_2}",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Coriolis Force",
+    "equation": "\\mathbf{F}_c = -2m (\\boldsymbol{\\omega} \\times \\mathbf{v})",
+    "context": "Rotational mechanics"
+  },
+  {
+    "name": "Centrifugal Force",
+    "equation": "\\mathbf{F}_{cf} = m \\omega^2 r \\,\\hat{\\mathbf{r}}",
+    "context": "Rotational mechanics"
+  },
+  {
+    "name": "Lagrangian",
+    "equation": "\\mathcal{L} = T - V",
+    "context": "Analytical mechanics"
+  },
+  {
+    "name": "Euler-Lagrange Equation",
+    "equation": "\\frac{d}{dt}\\left(\\frac{\\partial \\mathcal{L}}{\\partial \\dot{q}} \\right) - \\frac{\\partial \\mathcal{L}}{\\partial q} = 0",
+    "context": "Analytical mechanics"
+  },
+  {
+    "name": "Hamiltonian",
+    "equation": "\\mathcal{H} = T + V",
+    "context": "Analytical mechanics"
+  },
+  {
+    "name": "Hamilton's Equations",
+    "equation": "\\dot{q} = \\frac{\\partial \\mathcal{H}}{\\partial p}, \\quad \\dot{p} = -\\frac{\\partial \\mathcal{H}}{\\partial q}",
+    "context": "Analytical mechanics"
+  },
+  {
+    "name": "Action",
+    "equation": "S = \\int \\mathcal{L} \\, dt",
+    "context": "Analytical mechanics"
+  },
+  {
+    "name": "Principle of Least Action",
+    "equation": "\\delta S = 0",
+    "context": "Analytical mechanics"
+  },
+  {
+    "name": "Rocket Equation",
+    "equation": "\\Delta v = v_e \\ln\\left(\\frac{m_0}{m_f}\\right)",
+    "context": "Astronautics"
+  },
+  {
+    "name": "Conservation of Energy",
+    "equation": "\\text{KE}_i + \\text{PE}_i = \\text{KE}_f + \\text{PE}_f + W_{\\text{nc}}",
+    "context": "Classical mechanics"
+  },
+  {
+    "name": "Stress (Cauchy)",
+    "equation": "\\sigma = \\frac{F}{A}",
+    "context": "Continuum mechanics"
+  },
+  {
+    "name": "Strain",
+    "equation": "\\varepsilon = \\frac{\\Delta L}{L_0}",
+    "context": "Continuum mechanics"
+  },
+  {
+    "name": "Young's Modulus",
+    "equation": "E = \\frac{\\sigma}{\\varepsilon}",
+    "context": "Continuum mechanics"
+  },
+  {
+    "name": "Ideal Gas Law",
+    "equation": "PV = nRT",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "First Law of Thermodynamics",
+    "equation": "\\Delta U = Q - W",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Second Law of Thermodynamics",
+    "equation": "\\Delta S \\geq 0",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Entropy (Boltzmann)",
+    "equation": "S = k_B \\ln \\Omega",
+    "context": "Statistical mechanics"
+  },
+  {
+    "name": "Clausius-Clapeyron Equation",
+    "equation": "\\frac{dP}{dT} = \\frac{L}{T \\Delta V}",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Carnot Efficiency",
+    "equation": "\\eta = 1 - \\frac{T_c}{T_h}",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Heat Capacity (Constant Pressure)",
+    "equation": "C_p = \\left(\\frac{\\partial H}{\\partial T}\\right)_p",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Heat Capacity (Constant Volume)",
+    "equation": "C_v = \\left(\\frac{\\partial U}{\\partial T}\\right)_v",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Enthalpy",
+    "equation": "H = U + PV",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Gibbs Free Energy",
+    "equation": "G = H - TS",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Helmholtz Free Energy",
+    "equation": "F = U - TS",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Maxwell Relation 1",
+    "equation": "\\left(\\frac{\\partial T}{\\partial V}\\right)_S = -\\left(\\frac{\\partial P}{\\partial S}\\right)_V",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Maxwell Relation 2",
+    "equation": "\\left(\\frac{\\partial T}{\\partial P}\\right)_S = \\left(\\frac{\\partial V}{\\partial S}\\right)_P",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Maxwell Relation 3",
+    "equation": "\\left(\\frac{\\partial S}{\\partial V}\\right)_T = \\left(\\frac{\\partial P}{\\partial T}\\right)_V",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Maxwell Relation 4",
+    "equation": "-\\left(\\frac{\\partial S}{\\partial P}\\right)_T = \\left(\\frac{\\partial V}{\\partial T}\\right)_P",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Thermal Expansion (Linear)",
+    "equation": "\\Delta L = \\alpha L_0 \\Delta T",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Thermal Expansion (Volume)",
+    "equation": "\\Delta V = \\beta V_0 \\Delta T",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Adiabatic Process",
+    "equation": "PV^{\\gamma} = \\text{constant}",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Isothermal Process Work",
+    "equation": "W = nRT \\ln\\left(\\frac{V_f}{V_i}\\right)",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Otto Cycle Efficiency",
+    "equation": "\\eta = 1 - \\frac{1}{r^{\\gamma-1}}",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Stefan-Boltzmann Law",
+    "equation": "P = \\sigma A T^4",
+    "context": "Thermal radiation"
+  },
+  {
+    "name": "Wien's Displacement Law",
+    "equation": "\\lambda_{\\max} = \\frac{b}{T}",
+    "context": "Thermal radiation"
+  },
+  {
+    "name": "Planck's Law",
+    "equation": "B(\\nu,T) = \\frac{2h\\nu^3}{c^2} \\frac{1}{e^{h\\nu/kT} - 1}",
+    "context": "Quantum thermodynamics"
+  },
+  {
+    "name": "Virial Theorem",
+    "equation": "\\langle T \\rangle = -\\frac{1}{2}\\left\\langle \\sum \\mathbf{F} \\cdot \\mathbf{r} \\right\\rangle",
+    "context": "Statistical mechanics"
+  },
+  {
+    "name": "Boltzmann Distribution",
+    "equation": "P_i \\propto e^{-E_i/kT}",
+    "context": "Statistical mechanics"
+  },
+  {
+    "name": "Partition Function",
+    "equation": "Z = \\sum_i e^{-E_i/kT}",
+    "context": "Statistical mechanics"
+  },
+  {
+    "name": "Van der Waals Equation",
+    "equation": "\\left(P + a\\frac{n^2}{V^2}\\right)(V - nb) = nRT",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Joule-Thomson Coefficient",
+    "equation": "\\mu_{JT} = \\left(\\frac{\\partial T}{\\partial P}\\right)_H",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Chemical Potential",
+    "equation": "\\mu = \\left(\\frac{\\partial G}{\\partial N}\\right)_{T,P}",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Gibbs-Duhem Equation",
+    "equation": "S\\,dT - V\\,dP + N\\,d\\mu = 0",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Arrhenius Equation",
+    "equation": "k = A e^{-E_a/RT}",
+    "context": "Chemical kinetics"
+  },
+  {
+    "name": "Nernst Equation",
+    "equation": "E = E^\\circ - \\frac{RT}{nF} \\ln Q",
+    "context": "Electrochemistry"
+  },
+  {
+    "name": "Fourier's Law (Heat)",
+    "equation": "\\mathbf{q} = -k \\nabla T",
+    "context": "Heat transfer"
+  },
+  {
+    "name": "Newton's Law of Cooling",
+    "equation": "\\frac{dT}{dt} = -k(T - T_{\\text{env}})",
+    "context": "Heat transfer"
+  },
+  {
+    "name": "Einstein Relation (Diffusion)",
+    "equation": "D = \\mu k_B T",
+    "context": "Statistical mechanics"
+  },
+  {
+    "name": "Brownian Motion MSD",
+    "equation": "\\langle x^2 \\rangle = 2Dt",
+    "context": "Statistical mechanics"
+  },
+  {
+    "name": "Fick's First Law",
+    "equation": "\\mathbf{J} = -D \\nabla C",
+    "context": "Diffusion"
+  },
+  {
+    "name": "Fick's Second Law",
+    "equation": "\\frac{\\partial C}{\\partial t} = D \\nabla^2 C",
+    "context": "Diffusion"
+  },
+  {
+    "name": "Richardson's Law (Thermionic)",
+    "equation": "J = A_G T^2 e^{-W/kT}",
+    "context": "Thermionics"
+  },
+  {
+    "name": "Third Law of Thermodynamics",
+    "equation": "\\lim_{T \\to 0} S = 0",
+    "context": "Thermodynamics"
+  },
+  {
+    "name": "Coulomb's Law",
+    "equation": "\\mathbf{F} = k_e \\frac{q_1 q_2}{r^2} \\hat{\\mathbf{r}}",
+    "context": "Electrostatics"
+  },
+  {
+    "name": "Gauss's Law (Electricity)",
+    "equation": "\\nabla \\cdot \\mathbf{E} = \\frac{\\rho}{\\varepsilon_0}",
+    "context": "Electromagnetism"
+  },
+  {
+    "name": "Gauss's Law (Magnetism)",
+    "equation": "\\nabla \\cdot \\mathbf{B} = 0",
+    "context": "Electromagnetism"
+  },
+  {
+    "name": "Faraday's Law of Induction",
+    "equation": "\\nabla \\times \\mathbf{E} = -\\frac{\\partial \\mathbf{B}}{\\partial t}",
+    "context": "Electromagnetism"
+  },
+  {
+    "name": "Ampere's Law (with Maxwell correction)",
+    "equation": "\\nabla \\times \\mathbf{B} = \\mu_0 \\mathbf{J} + \\mu_0 \\varepsilon_0 \\frac{\\partial \\mathbf{E}}{\\partial t}",
+    "context": "Electromagnetism"
+  },
+  {
+    "name": "Lorentz Force Law",
+    "equation": "\\mathbf{F} = q(\\mathbf{E} + \\mathbf{v} \\times \\mathbf{B})",
+    "context": "Electromagnetism"
+  },
+  {
+    "name": "Ohm's Law",
+    "equation": "V = IR",
+    "context": "Circuit theory"
+  },
+  {
+    "name": "Resistivity",
+    "equation": "R = \\rho \\frac{L}{A}",
+    "context": "Circuit theory"
+  },
+  {
+    "name": "Joule Heating",
+    "equation": "P = I^2 R = \\frac{V^2}{R}",
+    "context": "Circuit theory"
+  },
+  {
+    "name": "Capacitance",
+    "equation": "C = \\frac{Q}{V}",
+    "context": "Electrostatics"
+  },
+  {
+    "name": "Parallel Plate Capacitance",
+    "equation": "C = \\frac{\\varepsilon_0 A}{d}",
+    "context": "Electrostatics"
+  },
+  {
+    "name": "Energy in a Capacitor",
+    "equation": "U = \\frac{1}{2} C V^2",
+    "context": "Electrostatics"
+  },
+  {
+    "name": "Inductance",
+    "equation": "V_L = L \\frac{dI}{dt}",
+    "context": "Electromagnetism"
+  },
+  {
+    "name": "Energy in an Inductor",
+    "equation": "U = \\frac{1}{2} L I^2",
+    "context": "Electromagnetism"
+  },
+  {
+    "name": "Magnetic Field of a Wire",
+    "equation": "B = \\frac{\\mu_0 I}{2\\pi r}",
+    "context": "Magnetostatics"
+  },
+  {
+    "name": "Magnetic Field of a Solenoid",
+    "equation": "B = \\mu_0 n I",
+    "context": "Magnetostatics"
+  },
+  {
+    "name": "Electric Field of a Point Charge",
+    "equation": "\\mathbf{E} = k_e \\frac{q}{r^2} \\hat{\\mathbf{r}}",
+    "context": "Electrostatics"
+  },
+  {
+    "name": "Electric Potential",
+    "equation": "V = k_e \\frac{q}{r}",
+    "context": "Electrostatics"
+  },
+  {
+    "name": "Potential Energy (Charges)",
+    "equation": "U = k_e \\frac{q_1 q_2}{r}",
+    "context": "Electrostatics"
+  },
+  {
+    "name": "Dipole Moment",
+    "equation": "\\mathbf{p} = q\\mathbf{d}",
+    "context": "Electrostatics"
+  },
+  {
+    "name": "Torque on a Dipole",
+    "equation": "\\boldsymbol{\\tau} = \\mathbf{p} \\times \\mathbf{E}",
+    "context": "Electrostatics"
+  },
+  {
+    "name": "RC Circuit Charge",
+    "equation": "Q(t) = Q_0 \\left(1 - e^{-t/RC}\\right)",
+    "context": "Circuit theory"
+  },
+  {
+    "name": "RC Circuit Discharge",
+    "equation": "Q(t) = Q_0 e^{-t/RC}",
+    "context": "Circuit theory"
+  },
+  {
+    "name": "RL Circuit Current",
+    "equation": "I(t) = \\frac{V}{R}\\left(1 - e^{-Rt/L}\\right)",
+    "context": "Circuit theory"
+  },
+  {
+    "name": "LC Circuit Frequency",
+    "equation": "\\omega = \\frac{1}{\\sqrt{LC}}",
+    "context": "Circuit theory"
+  },
+  {
+    "name": "RLC Circuit Impedance",
+    "equation": "Z = \\sqrt{R^2 + \\left(\\omega L - \\frac{1}{\\omega C}\\right)^2}",
+    "context": "Circuit theory"
+  },
+  {
+    "name": "Wave Equation for E",
+    "equation": "\\nabla^2 \\mathbf{E} = \\mu_0 \\varepsilon_0 \\frac{\\partial^2 \\mathbf{E}}{\\partial t^2}",
+    "context": "Electromagnetic waves"
+  },
+  {
+    "name": "Speed of Light",
+    "equation": "c = \\frac{1}{\\sqrt{\\mu_0 \\varepsilon_0}}",
+    "context": "Electromagnetism"
+  },
+  {
+    "name": "Poynting Vector",
+    "equation": "\\mathbf{S} = \\frac{1}{\\mu_0} (\\mathbf{E} \\times \\mathbf{B})",
+    "context": "Electromagnetic waves"
+  },
+  {
+    "name": "Energy Density (E&M)",
+    "equation": "u = \\frac{1}{2} \\varepsilon_0 E^2 + \\frac{1}{2} \\frac{B^2}{\\mu_0}",
+    "context": "Electromagnetism"
+  },
+  {
+    "name": "Biot-Savart Law",
+    "equation": "d\\mathbf{B} = \\frac{\\mu_0}{4\\pi} \\frac{I\\,d\\mathbf{l} \\times \\hat{\\mathbf{r}}}{r^2}",
+    "context": "Magnetostatics"
+  },
+  {
+    "name": "Magnetic Flux",
+    "equation": "\\Phi_B = \\int \\mathbf{B} \\cdot d\\mathbf{A}",
+    "context": "Electromagnetism"
+  },
+  {
+    "name": "Transformer Equation",
+    "equation": "\\frac{V_s}{V_p} = \\frac{N_s}{N_p}",
+    "context": "Circuit theory"
+  },
+  {
+    "name": "Magnetic Force on a Wire",
+    "equation": "\\mathbf{F} = I\\mathbf{L} \\times \\mathbf{B}",
+    "context": "Magnetostatics"
+  },
+  {
+    "name": "Electric Field Energy",
+    "equation": "U_E = \\frac{1}{2} \\varepsilon_0 \\int E^2 \\,dV",
+    "context": "Electrostatics"
+  },
+  {
+    "name": "Dielectric Constant",
+    "equation": "C = \\kappa C_0",
+    "context": "Dielectrics"
+  },
+  {
+    "name": "RC Time Constant",
+    "equation": "\\tau = RC",
+    "context": "Circuit theory"
+  },
+  {
+    "name": "Drift Velocity",
+    "equation": "v_d = \\frac{I}{nAq}",
+    "context": "Conduction"
+  },
+  {
+    "name": "Wheatstone Bridge",
+    "equation": "R_x = \\frac{R_2 R_3}{R_1} \\quad (\\text{when balanced})",
+    "context": "Circuit theory"
+  },
+  {
+    "name": "Kirchhoff's Current Law",
+    "equation": "\\sum I_{\\text{in}} = \\sum I_{\\text{out}}",
+    "context": "Circuit theory"
+  },
+  {
+    "name": "Schrödinger's Equation (Time-Dependent)",
+    "equation": "i\\hbar \\frac{\\partial \\Psi}{\\partial t} = \\hat{H} \\Psi",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Schrödinger's Equation (Time-Independent)",
+    "equation": "\\hat{H} \\psi = E \\psi",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Heisenberg Uncertainty Principle",
+    "equation": "\\Delta x \\Delta p \\geq \\frac{\\hbar}{2}",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Planck-Einstein Energy",
+    "equation": "E = h\\nu",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "de Broglie Wavelength",
+    "equation": "\\lambda = \\frac{h}{p}",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Commutator",
+    "equation": "[\\hat{A}, \\hat{B}] = \\hat{A}\\hat{B} - \\hat{B}\\hat{A}",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Probability Density",
+    "equation": "P(x) = |\\psi(x)|^2",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Expectation Value",
+    "equation": "\\langle \\hat{A} \\rangle = \\int \\psi^* \\hat{A} \\psi \\,dV",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Pauli Exclusion Principle",
+    "equation": "\\psi(1,2) = -\\psi(2,1) \\quad \\text{for fermions}",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Pauli Matrices",
+    "equation": "\\sigma_x = \\begin{pmatrix} 0 & 1 \\\\ 1 & 0 \\end{pmatrix},\\; \\sigma_y = \\begin{pmatrix} 0 & -i \\\\ i & 0 \\end{pmatrix},\\; \\sigma_z = \\begin{pmatrix} 1 & 0 \\\\ 0 & -1 \\end{pmatrix}",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Spin Operator",
+    "equation": "\\hat{\\mathbf{S}} = \\frac{\\hbar}{2} \\boldsymbol{\\sigma}",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Quantum Harmonic Oscillator Energy",
+    "equation": "E_n = \\hbar\\omega\\left(n + \\frac{1}{2}\\right)",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Infinite Square Well",
+    "equation": "\\psi_n(x) = \\sqrt{\\frac{2}{L}} \\sin\\left(\\frac{n\\pi x}{L}\\right)",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Finite Potential Barrier (Tunneling)",
+    "equation": "T \\approx \\frac{16E(V_0-E)}{V_0^2} e^{-2\\kappa a}",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Hydrogen Atom Energy Levels",
+    "equation": "E_n = -\\frac{13.6}{n^2} \\text{ eV}",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Bohr Radius",
+    "equation": "a_0 = \\frac{4\\pi\\varepsilon_0 \\hbar^2}{m_e e^2}",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Angular Momentum Quantization",
+    "equation": "L = \\sqrt{l(l+1)}\\,\\hbar",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Spin Quantum Number",
+    "equation": "s = \\pm \\frac{1}{2} \\quad \\text{for electrons}",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Perturbation Theory (Time-Independent)",
+    "equation": "E_n^{(1)} = \\langle \\psi_n^{(0)} | \\hat{H}' | \\psi_n^{(0)} \\rangle",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Fermi's Golden Rule",
+    "equation": "\\Gamma = \\frac{2\\pi}{\\hbar} |\\langle f| \\hat{H}' | i \\rangle|^2 \\rho(E_f)",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Einstein Coefficients",
+    "equation": "\\frac{A_{21}}{B_{21}} = \\frac{\\hbar\\omega^3}{\\pi^2 c^3}",
+    "context": "Quantum optics"
+  },
+  {
+    "name": "Bell's Inequality",
+    "equation": "|P(a,b) - P(a,c)| \\leq 1 + P(b,c)",
+    "context": "Quantum foundations"
+  },
+  {
+    "name": "Density Matrix",
+    "equation": "\\rho = \\sum_i p_i |\\psi_i\\rangle \\langle\\psi_i|",
+    "context": "Quantum information"
+  },
+  {
+    "name": "Wigner-Eckart Theorem",
+    "equation": "\\langle\\alpha,j,m| T_q^k |\\alpha',j',m'\\rangle \\propto \\langle j',k; m',q | j,m\\rangle",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Ladder Operators",
+    "equation": "\\hat{a}_{\\pm} = \\sqrt{\\frac{m\\omega}{2\\hbar}} \\left(\\hat{x} \\mp \\frac{i\\hat{p}}{m\\omega}\\right)",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Creation and Annihilation",
+    "equation": "[\\hat{a}, \\hat{a}^\\dagger] = 1",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Number Operator",
+    "equation": "\\hat{N} = \\hat{a}^\\dagger \\hat{a}",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Electron g-Factor",
+    "equation": "g_e \\approx 2.00232",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Fine-Structure Constant",
+    "equation": "\\alpha = \\frac{e^2}{4\\pi\\varepsilon_0 \\hbar c} \\approx \\frac{1}{137}",
+    "context": "Quantum electrodynamics"
+  },
+  {
+    "name": "Rydberg Formula",
+    "equation": "\\frac{1}{\\lambda} = R\\left(\\frac{1}{n_1^2} - \\frac{1}{n_2^2}\\right)",
+    "context": "Atomic physics"
+  },
+  {
+    "name": "Blackbody Radiation",
+    "equation": "u(\\nu,T) = \\frac{8\\pi h\\nu^3}{c^3} \\frac{1}{e^{h\\nu/kT} - 1}",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Photoelectric Effect",
+    "equation": "\\text{KE}_{\\max} = hf - \\phi",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Compton Scattering",
+    "equation": "\\Delta\\lambda = \\frac{h}{m_e c}(1 - \\cos\\theta)",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Wavefunction Collapse",
+    "equation": "|\\psi\\rangle \\to |\\phi\\rangle \\quad \\text{with } P = |\\langle\\phi|\\psi\\rangle|^2",
+    "context": "Quantum foundations"
+  },
+  {
+    "name": "Ehrenfest's Theorem",
+    "equation": "\\frac{d\\langle A \\rangle}{dt} = \\frac{i}{\\hbar}\\langle [A,H] \\rangle + \\left\\langle \\frac{\\partial A}{\\partial t} \\right\\rangle",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Stern-Gerlach Splitting",
+    "equation": "F_z = \\mu_z \\frac{\\partial B_z}{\\partial z}",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Zeeman Effect",
+    "equation": "\\Delta E = \\mu_B B \\, m_l",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "WKB Approximation",
+    "equation": "\\psi(x) \\approx \\frac{1}{\\sqrt{p(x)}} e^{\\pm \\frac{i}{\\hbar} \\int p\\,dx}",
+    "context": "Quantum mechanics"
+  },
+  {
+    "name": "Born Approximation",
+    "equation": "f(\\theta,\\phi) = -\\frac{m}{2\\pi\\hbar^2} \\int e^{-i\\mathbf{q}\\cdot\\mathbf{r}} V(\\mathbf{r}) \\,d^3r",
+    "context": "Quantum scattering"
+  },
+  {
+    "name": "Møller-Plesset Theorem",
+    "equation": "E_{\\text{MP2}} = \\sum_{\\substack{i<j\\\\ a<b}} \\frac{|\\langle ij || ab \\rangle|^2}{\\varepsilon_i + \\varepsilon_j - \\varepsilon_a - \\varepsilon_b}",
+    "context": "Quantum chemistry"
+  },
+  {
+    "name": "Klein-Gordon Equation",
+    "equation": "\\left(\\Box + \\frac{m^2 c^2}{\\hbar^2}\\right) \\psi = 0",
+    "context": "Relativistic quantum mechanics"
+  },
+  {
+    "name": "Einstein's Mass-Energy Equivalence",
+    "equation": "E = mc^2",
+    "context": "Special relativity"
+  },
+  {
+    "name": "Lorentz Factor",
+    "equation": "\\gamma = \\frac{1}{\\sqrt{1 - v^2/c^2}}",
+    "context": "Special relativity"
+  },
+  {
+    "name": "Time Dilation",
+    "equation": "\\Delta t' = \\gamma \\Delta t_0",
+    "context": "Special relativity"
+  },
+  {
+    "name": "Length Contraction",
+    "equation": "L = \\frac{L_0}{\\gamma}",
+    "context": "Special relativity"
+  },
+  {
+    "name": "Relativistic Momentum",
+    "equation": "\\mathbf{p} = \\gamma m \\mathbf{v}",
+    "context": "Special relativity"
+  },
+  {
+    "name": "Relativistic Kinetic Energy",
+    "equation": "\\text{KE} = (\\gamma - 1) m c^2",
+    "context": "Special relativity"
+  },
+  {
+    "name": "Lorentz Transformation",
+    "equation": "x' = \\gamma(x - vt), \\quad t' = \\gamma\\left(t - \\frac{vx}{c^2}\\right)",
+    "context": "Special relativity"
+  },
+  {
+    "name": "Velocity Addition",
+    "equation": "u' = \\frac{u - v}{1 - uv/c^2}",
+    "context": "Special relativity"
+  },
+  {
+    "name": "Four-Momentum",
+    "equation": "p^\\mu = \\left(\\frac{E}{c}, \\mathbf{p}\\right)",
+    "context": "Special relativity"
+  },
+  {
+    "name": "Spacetime Interval",
+    "equation": "ds^2 = -c^2 dt^2 + dx^2 + dy^2 + dz^2",
+    "context": "Relativity"
+  },
+  {
+    "name": "Einstein's Field Equations",
+    "equation": "G_{\\mu\\nu} + \\Lambda g_{\\mu\\nu} = \\frac{8\\pi G}{c^4} T_{\\mu\\nu}",
+    "context": "General relativity"
+  },
+  {
+    "name": "Schwarzschild Metric",
+    "equation": "ds^2 = -\\left(1 - \\frac{2GM}{rc^2}\\right)c^2 dt^2 + \\frac{dr^2}{1 - \\frac{2GM}{rc^2}} + r^2 d\\Omega^2",
+    "context": "General relativity"
+  },
+  {
+    "name": "Schwarzschild Radius",
+    "equation": "r_s = \\frac{2GM}{c^2}",
+    "context": "General relativity"
+  },
+  {
+    "name": "Friedmann Equation",
+    "equation": "\\left(\\frac{\\dot{a}}{a}\\right)^2 = \\frac{8\\pi G \\rho + \\Lambda c^2}{3}",
+    "context": "Cosmology"
+  },
+  {
+    "name": "Hubble's Law",
+    "equation": "v = H_0 d",
+    "context": "Cosmology"
+  },
+  {
+    "name": "Cosmological Redshift",
+    "equation": "1 + z = \\frac{a_{\\text{now}}}{a_{\\text{then}}}",
+    "context": "Cosmology"
+  },
+  {
+    "name": "Gravitational Time Dilation",
+    "equation": "\\Delta t = \\frac{\\Delta t_0}{\\sqrt{1 - \\frac{2GM}{rc^2}}}",
+    "context": "General relativity"
+  },
+  {
+    "name": "Geodesic Equation",
+    "equation": "\\frac{d^2 x^\\mu}{d\\tau^2} + \\Gamma^\\mu_{\\nu\\rho} \\frac{dx^\\nu}{d\\tau} \\frac{dx^\\rho}{d\\tau} = 0",
+    "context": "General relativity"
+  },
+  {
+    "name": "Gravitational Wave Strain",
+    "equation": "h = \\frac{2G}{c^4} \\frac{\\ddot{Q}_{ij}}{r}",
+    "context": "General relativity"
+  },
+  {
+    "name": "Luminosity Distance",
+    "equation": "d_L = \\sqrt{\\frac{L}{4\\pi F}}",
+    "context": "Cosmology"
+  },
+  {
+    "name": "FLRW Metric",
+    "equation": "ds^2 = -c^2 dt^2 + a(t)^2\\left[\\frac{dr^2}{1-kr^2} + r^2 d\\Omega^2 \\right]",
+    "context": "Cosmology"
+  },
+  {
+    "name": "Critical Density",
+    "equation": "\\rho_c = \\frac{3H_0^2}{8\\pi G}",
+    "context": "Cosmology"
+  },
+  {
+    "name": "Cosmological Constant (Dark Energy)",
+    "equation": "\\Omega_\\Lambda = \\frac{\\Lambda c^2}{3H_0^2}",
+    "context": "Cosmology"
+  },
+  {
+    "name": "Relativistic Doppler Effect",
+    "equation": "f_{\\text{obs}} = f_{\\text{src}} \\sqrt{\\frac{1+\\beta}{1-\\beta}}",
+    "context": "Special relativity"
+  },
+  {
+    "name": "Energy-Momentum Relation",
+    "equation": "E^2 = (pc)^2 + (mc^2)^2",
+    "context": "Special relativity"
+  },
+  {
+    "name": "Quadratic Formula",
+    "equation": "x = \\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}",
+    "context": "Algebra"
+  },
+  {
+    "name": "Difference of Squares",
+    "equation": "a^2 - b^2 = (a+b)(a-b)",
+    "context": "Algebra"
+  },
+  {
+    "name": "Sum of Cubes",
+    "equation": "a^3 + b^3 = (a+b)(a^2 - ab + b^2)",
+    "context": "Algebra"
+  },
+  {
+    "name": "Binomial Theorem",
+    "equation": "(x+y)^n = \\sum_{k=0}^{n} \\binom{n}{k} x^{n-k} y^k",
+    "context": "Algebra"
+  },
+  {
+    "name": "Pascal's Triangle",
+    "equation": "\\binom{n}{k} = \\binom{n-1}{k-1} + \\binom{n-1}{k}",
+    "context": "Combinatorics"
+  },
+  {
+    "name": "Logarithm Definition",
+    "equation": "\\log_b(a) = c \\iff b^c = a",
+    "context": "Algebra"
+  },
+  {
+    "name": "Change of Base",
+    "equation": "\\log_b(a) = \\frac{\\log_c(a)}{\\log_c(b)}",
+    "context": "Algebra"
+  },
+  {
+    "name": "Euler's Formula",
+    "equation": "e^{i\\theta} = \\cos\\theta + i\\sin\\theta",
+    "context": "Complex analysis"
+  },
+  {
+    "name": "De Moivre's Theorem",
+    "equation": "(\\cos\\theta + i\\sin\\theta)^n = \\cos(n\\theta) + i\\sin(n\\theta)",
+    "context": "Complex analysis"
+  },
+  {
+    "name": "Fundamental Theorem of Algebra",
+    "equation": "P(z) = a\\prod_{k=1}^{n} (z - r_k), \\quad \\deg(P) = n \\text{ has } n \\text{ complex roots}",
+    "context": "Algebra"
+  },
+  {
+    "name": "Matrix Multiplication",
+    "equation": "(AB)_{ij} = \\sum_k A_{ik} B_{kj}",
+    "context": "Linear algebra"
+  },
+  {
+    "name": "Determinant (2x2)",
+    "equation": "\\det\\begin{pmatrix} a & b \\\\ c & d \\end{pmatrix} = ad - bc",
+    "context": "Linear algebra"
+  },
+  {
+    "name": "Cramer's Rule",
+    "equation": "x_i = \\frac{\\det(A_i)}{\\det(A)}",
+    "context": "Linear algebra"
+  },
+  {
+    "name": "Inverse of 2x2 Matrix",
+    "equation": "A^{-1} = \\frac{1}{\\det(A)} \\begin{pmatrix} d & -b \\\\ -c & a \\end{pmatrix}",
+    "context": "Linear algebra"
+  },
+  {
+    "name": "Cayley-Hamilton Theorem",
+    "equation": "p(A) = 0 \\quad \\text{(characteristic polynomial of }A\\text{)}",
+    "context": "Linear algebra"
+  },
+  {
+    "name": "Gram-Schmidt Process",
+    "equation": "\\mathbf{u}_k = \\mathbf{v}_k - \\sum_{j<k} \\operatorname{proj}_{\\mathbf{u}_j}(\\mathbf{v}_k)",
+    "context": "Linear algebra"
+  },
+  {
+    "name": "Eigenvalue Equation",
+    "equation": "A\\mathbf{v} = \\lambda \\mathbf{v}",
+    "context": "Linear algebra"
+  },
+  {
+    "name": "Dot Product",
+    "equation": "\\mathbf{a} \\cdot \\mathbf{b} = |\\mathbf{a}||\\mathbf{b}|\\cos\\theta = \\sum_i a_i b_i",
+    "context": "Linear algebra"
+  },
+  {
+    "name": "Cross Product",
+    "equation": "\\mathbf{a} \\times \\mathbf{b} = |\\mathbf{a}||\\mathbf{b}|\\sin\\theta \\;\\hat{\\mathbf{n}}",
+    "context": "Vector algebra"
+  },
+  {
+    "name": "Scalar Triple Product",
+    "equation": "\\mathbf{a} \\cdot (\\mathbf{b} \\times \\mathbf{c}) = (\\mathbf{a} \\times \\mathbf{b}) \\cdot \\mathbf{c}",
+    "context": "Vector algebra"
+  },
+  {
+    "name": "Cauchy-Schwarz Inequality",
+    "equation": "|\\langle \\mathbf{u}, \\mathbf{v} \\rangle|^2 \\leq \\langle \\mathbf{u}, \\mathbf{u} \\rangle \\langle \\mathbf{v}, \\mathbf{v} \\rangle",
+    "context": "Linear algebra"
+  },
+  {
+    "name": "Triangle Inequality",
+    "equation": "|\\mathbf{a} + \\mathbf{b}| \\leq |\\mathbf{a}| + |\\mathbf{b}|",
+    "context": "Algebra"
+  },
+  {
+    "name": "Arithmetic Series",
+    "equation": "S_n = \\frac{n(a_1 + a_n)}{2}",
+    "context": "Algebra"
+  },
+  {
+    "name": "Geometric Series",
+    "equation": "S_n = a\\frac{1 - r^n}{1 - r}",
+    "context": "Algebra"
+  },
+  {
+    "name": "Infinite Geometric Series",
+    "equation": "S = \\frac{a}{1-r} \\quad \\text{for } |r|<1",
+    "context": "Algebra"
+  },
+  {
+    "name": "Exponential Growth",
+    "equation": "N(t) = N_0 e^{rt}",
+    "context": "Algebra"
+  },
+  {
+    "name": "Logistic Growth",
+    "equation": "P(t) = \\frac{K}{1 + \\left(\\frac{K}{P_0} - 1\\right) e^{-rt}}",
+    "context": "Algebra"
+  },
+  {
+    "name": "Compound Interest",
+    "equation": "A = P\\left(1 + \\frac{r}{n}\\right)^{nt}",
+    "context": "Financial mathematics"
+  },
+  {
+    "name": "Continuous Compounding",
+    "equation": "A = Pe^{rt}",
+    "context": "Financial mathematics"
+  },
+  {
+    "name": "Effective Annual Rate",
+    "equation": "\\text{EAR} = \\left(1 + \\frac{r}{n}\\right)^n - 1",
+    "context": "Financial mathematics"
+  },
+  {
+    "name": "Present Value",
+    "equation": "\\text{PV} = \\frac{FV}{(1+r)^n}",
+    "context": "Financial mathematics"
+  },
+  {
+    "name": "Root Mean Square",
+    "equation": "X_{\\text{rms}} = \\sqrt{\\frac{1}{n}\\sum_i x_i^2}",
+    "context": "Statistics"
+  },
+  {
+    "name": "Variance",
+    "equation": "\\operatorname{Var}(X) = \\mathbb{E}[(X-\\mu)^2]",
+    "context": "Statistics"
+  },
+  {
+    "name": "Standard Deviation",
+    "equation": "\\sigma = \\sqrt{\\operatorname{Var}(X)}",
+    "context": "Statistics"
+  },
+  {
+    "name": "Covariance",
+    "equation": "\\operatorname{Cov}(X,Y) = \\mathbb{E}[(X-\\mu_X)(Y-\\mu_Y)]",
+    "context": "Statistics"
+  },
+  {
+    "name": "Definition of Derivative",
+    "equation": "f'(x) = \\lim_{h \\to 0} \\frac{f(x+h) - f(x)}{h}",
+    "context": "Calculus"
+  },
+  {
+    "name": "Power Rule",
+    "equation": "\\frac{d}{dx}(x^n) = nx^{n-1}",
+    "context": "Calculus"
+  },
+  {
+    "name": "Product Rule",
+    "equation": "(fg)' = f'g + fg'",
+    "context": "Calculus"
+  },
+  {
+    "name": "Quotient Rule",
+    "equation": "\\left(\\frac{f}{g}\\right)' = \\frac{f'g - fg'}{g^2}",
+    "context": "Calculus"
+  },
+  {
+    "name": "Chain Rule",
+    "equation": "(f \\circ g)'(x) = f'(g(x)) \\, g'(x)",
+    "context": "Calculus"
+  },
+  {
+    "name": "Fundamental Theorem of Calculus I",
+    "equation": "\\int_a^b f(x)\\,dx = F(b) - F(a)",
+    "context": "Calculus"
+  },
+  {
+    "name": "Fundamental Theorem of Calculus II",
+    "equation": "\\frac{d}{dx} \\int_a^x f(t)\\,dt = f(x)",
+    "context": "Calculus"
+  },
+  {
+    "name": "Integration by Parts",
+    "equation": "\\int u\\,dv = uv - \\int v\\,du",
+    "context": "Calculus"
+  },
+  {
+    "name": "L'Hôpital's Rule",
+    "equation": "\\lim_{x \\to c} \\frac{f(x)}{g(x)} = \\lim_{x \\to c} \\frac{f'(x)}{g'(x)}",
+    "context": "Calculus"
+  },
+  {
+    "name": "Taylor Series",
+    "equation": "f(x) = \\sum_{n=0}^{\\infty} \\frac{f^{(n)}(a)}{n!} (x-a)^n",
+    "context": "Calculus"
+  },
+  {
+    "name": "Maclaurin Series for e^x",
+    "equation": "e^x = \\sum_{n=0}^{\\infty} \\frac{x^n}{n!}",
+    "context": "Calculus"
+  },
+  {
+    "name": "Maclaurin Series for sin x",
+    "equation": "\\sin x = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n+1}}{(2n+1)!}",
+    "context": "Calculus"
+  },
+  {
+    "name": "Maclaurin Series for cos x",
+    "equation": "\\cos x = \\sum_{n=0}^{\\infty} \\frac{(-1)^n x^{2n}}{(2n)!}",
+    "context": "Calculus"
+  },
+  {
+    "name": "Gradient",
+    "equation": "\\nabla f = \\left(\\frac{\\partial f}{\\partial x}, \\frac{\\partial f}{\\partial y}, \\frac{\\partial f}{\\partial z}\\right)",
+    "context": "Vector calculus"
+  },
+  {
+    "name": "Divergence",
+    "equation": "\\nabla \\cdot \\mathbf{F} = \\frac{\\partial F_x}{\\partial x} + \\frac{\\partial F_y}{\\partial y} + \\frac{\\partial F_z}{\\partial z}",
+    "context": "Vector calculus"
+  },
+  {
+    "name": "Curl",
+    "equation": "\\nabla \\times \\mathbf{F} = \\left(\\frac{\\partial F_z}{\\partial y} - \\frac{\\partial F_y}{\\partial z},\\; \\frac{\\partial F_x}{\\partial z} - \\frac{\\partial F_z}{\\partial x},\\; \\frac{\\partial F_y}{\\partial x} - \\frac{\\partial F_x}{\\partial y}\\right)",
+    "context": "Vector calculus"
+  },
+  {
+    "name": "Laplacian",
+    "equation": "\\nabla^2 f = \\frac{\\partial^2 f}{\\partial x^2} + \\frac{\\partial^2 f}{\\partial y^2} + \\frac{\\partial^2 f}{\\partial z^2}",
+    "context": "Vector calculus"
+  },
+  {
+    "name": "Divergence Theorem",
+    "equation": "\\int_V (\\nabla \\cdot \\mathbf{F})\\,dV = \\oint_S \\mathbf{F} \\cdot d\\mathbf{A}",
+    "context": "Vector calculus"
+  },
+  {
+    "name": "Stokes' Theorem",
+    "equation": "\\int_S (\\nabla \\times \\mathbf{F}) \\cdot d\\mathbf{A} = \\oint_C \\mathbf{F} \\cdot d\\mathbf{r}",
+    "context": "Vector calculus"
+  },
+  {
+    "name": "Green's Theorem",
+    "equation": "\\oint_C (L\\,dx + M\\,dy) = \\iint_D \\left(\\frac{\\partial M}{\\partial x} - \\frac{\\partial L}{\\partial y}\\right) dA",
+    "context": "Vector calculus"
+  },
+  {
+    "name": "Mean Value Theorem",
+    "equation": "f'(c) = \\frac{f(b) - f(a)}{b-a}",
+    "context": "Calculus"
+  },
+  {
+    "name": "Intermediate Value Theorem",
+    "equation": "f(a) < k < f(b) \\implies \\exists c: f(c) = k",
+    "context": "Calculus"
+  },
+  {
+    "name": "Extreme Value Theorem",
+    "equation": "f \\text{ continuous on } [a,b] \\text{ attains max and min}",
+    "context": "Calculus"
+  },
+  {
+    "name": "Euler's Formula (Polyhedra)",
+    "equation": "V - E + F = 2",
+    "context": "Topology"
+  },
+  {
+    "name": "Gamma Function",
+    "equation": "\\Gamma(n) = \\int_0^{\\infty} t^{n-1} e^{-t}\\,dt",
+    "context": "Special functions"
+  },
+  {
+    "name": "Beta Function",
+    "equation": "B(x,y) = \\int_0^1 t^{x-1} (1-t)^{y-1}\\,dt",
+    "context": "Special functions"
+  },
+  {
+    "name": "Stirling's Approximation",
+    "equation": "n! \\approx \\sqrt{2\\pi n}\\left(\\frac{n}{e}\\right)^n",
+    "context": "Analysis"
+  },
+  {
+    "name": "Riemann Zeta Function",
+    "equation": "\\zeta(s) = \\sum_{n=1}^{\\infty} \\frac{1}{n^s}",
+    "context": "Complex analysis"
+  },
+  {
+    "name": "Basel Problem",
+    "equation": "\\sum_{n=1}^{\\infty} \\frac{1}{n^2} = \\frac{\\pi^2}{6}",
+    "context": "Analysis"
+  },
+  {
+    "name": "Laplace Transform",
+    "equation": "\\mathcal{L}\\{f(t)\\} = F(s) = \\int_0^{\\infty} f(t) e^{-st}\\,dt",
+    "context": "Calculus"
+  },
+  {
+    "name": "Fourier Series",
+    "equation": "f(x) = \\frac{a_0}{2} + \\sum_{n=1}^{\\infty} \\left(a_n \\cos(nx) + b_n \\sin(nx)\\right)",
+    "context": "Analysis"
+  },
+  {
+    "name": "Fourier Transform",
+    "equation": "\\hat{f}(\\xi) = \\int_{-\\infty}^{\\infty} f(x) e^{-2\\pi i x \\xi}\\,dx",
+    "context": "Analysis"
+  },
+  {
+    "name": "Convolution",
+    "equation": "(f * g)(t) = \\int_{-\\infty}^{\\infty} f(\\tau) g(t-\\tau)\\,d\\tau",
+    "context": "Analysis"
+  },
+  {
+    "name": "Cauchy-Riemann Equations",
+    "equation": "\\frac{\\partial u}{\\partial x} = \\frac{\\partial v}{\\partial y}, \\quad \\frac{\\partial u}{\\partial y} = -\\frac{\\partial v}{\\partial x}",
+    "context": "Complex analysis"
+  },
+  {
+    "name": "Cauchy Integral Formula",
+    "equation": "f(a) = \\frac{1}{2\\pi i} \\oint_\\gamma \\frac{f(z)}{z-a}\\,dz",
+    "context": "Complex analysis"
+  },
+  {
+    "name": "Residue Theorem",
+    "equation": "\\oint_\\gamma f(z)\\,dz = 2\\pi i \\sum_k \\operatorname{Res}(f,a_k)",
+    "context": "Complex analysis"
+  },
+  {
+    "name": "Liouville's Theorem",
+    "equation": "\\text{entire bounded } f \\text{ is constant}",
+    "context": "Complex analysis"
+  },
+  {
+    "name": "Contour Integration",
+    "equation": "\\int_{-\\infty}^{\\infty} f(x)\\,dx = 2\\pi i \\sum_{\\operatorname{Im}>0} \\operatorname{Res}(f)",
+    "context": "Complex analysis"
+  },
+  {
+    "name": "Weierstrass M-Test",
+    "equation": "\\sum M_n \\text{ converges } \\implies \\sum f_n \\text{ converges uniformly}",
+    "context": "Analysis"
+  },
+  {
+    "name": "Lagrange Multipliers",
+    "equation": "\\nabla f = \\lambda \\nabla g",
+    "context": "Calculus"
+  },
+  {
+    "name": "Pythagorean Theorem",
+    "equation": "a^2 + b^2 = c^2",
+    "context": "Geometry"
+  },
+  {
+    "name": "Area of a Circle",
+    "equation": "A = \\pi r^2",
+    "context": "Geometry"
+  },
+  {
+    "name": "Circumference of a Circle",
+    "equation": "C = 2\\pi r",
+    "context": "Geometry"
+  },
+  {
+    "name": "Volume of a Sphere",
+    "equation": "V = \\frac{4}{3}\\pi r^3",
+    "context": "Geometry"
+  },
+  {
+    "name": "Surface Area of a Sphere",
+    "equation": "A = 4\\pi r^2",
+    "context": "Geometry"
+  },
+  {
+    "name": "Law of Sines",
+    "equation": "\\frac{a}{\\sin A} = \\frac{b}{\\sin B} = \\frac{c}{\\sin C} = 2R",
+    "context": "Trigonometry"
+  },
+  {
+    "name": "Law of Cosines",
+    "equation": "c^2 = a^2 + b^2 - 2ab\\cos C",
+    "context": "Trigonometry"
+  },
+  {
+    "name": "Sine Addition Formula",
+    "equation": "\\sin(A+B) = \\sin A \\cos B + \\cos A \\sin B",
+    "context": "Trigonometry"
+  },
+  {
+    "name": "Cosine Addition Formula",
+    "equation": "\\cos(A+B) = \\cos A \\cos B - \\sin A \\sin B",
+    "context": "Trigonometry"
+  },
+  {
+    "name": "Tangent Addition Formula",
+    "equation": "\\tan(A+B) = \\frac{\\tan A + \\tan B}{1 - \\tan A \\tan B}",
+    "context": "Trigonometry"
+  },
+  {
+    "name": "Double Angle (Sine)",
+    "equation": "\\sin(2\\theta) = 2\\sin\\theta \\cos\\theta",
+    "context": "Trigonometry"
+  },
+  {
+    "name": "Double Angle (Cosine)",
+    "equation": "\\cos(2\\theta) = \\cos^2\\theta - \\sin^2\\theta = 2\\cos^2\\theta-1 = 1-2\\sin^2\\theta",
+    "context": "Trigonometry"
+  },
+  {
+    "name": "Pythagorean Identity",
+    "equation": "\\sin^2\\theta + \\cos^2\\theta = 1",
+    "context": "Trigonometry"
+  },
+  {
+    "name": "Area of a Triangle (Heron)",
+    "equation": "A = \\sqrt{s(s-a)(s-b)(s-c)}, \\quad s = \\frac{a+b+c}{2}",
+    "context": "Geometry"
+  },
+  {
+    "name": "Area of a Triangle (Base-Height)",
+    "equation": "A = \\frac{1}{2}bh",
+    "context": "Geometry"
+  },
+  {
+    "name": "Euclidean Distance (2D)",
+    "equation": "d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}",
+    "context": "Geometry"
+  },
+  {
+    "name": "Euclidean Distance (3D)",
+    "equation": "d = \\sqrt{(x_2-x_1)^2 + (y_2-y_1)^2 + (z_2-z_1)^2}",
+    "context": "Geometry"
+  },
+  {
+    "name": "Equation of a Circle",
+    "equation": "(x-h)^2 + (y-k)^2 = r^2",
+    "context": "Analytic geometry"
+  },
+  {
+    "name": "Equation of an Ellipse",
+    "equation": "\\frac{(x-h)^2}{a^2} + \\frac{(y-k)^2}{b^2} = 1",
+    "context": "Analytic geometry"
+  },
+  {
+    "name": "Equation of a Parabola",
+    "equation": "y = a(x-h)^2 + k",
+    "context": "Analytic geometry"
+  },
+  {
+    "name": "Equation of a Hyperbola",
+    "equation": "\\frac{(x-h)^2}{a^2} - \\frac{(y-k)^2}{b^2} = 1",
+    "context": "Analytic geometry"
+  },
+  {
+    "name": "Slope Formula",
+    "equation": "m = \\frac{y_2 - y_1}{x_2 - x_1}",
+    "context": "Analytic geometry"
+  },
+  {
+    "name": "Distance from Point to Line",
+    "equation": "d = \\frac{|Ax_0 + By_0 + C|}{\\sqrt{A^2 + B^2}}",
+    "context": "Analytic geometry"
+  },
+  {
+    "name": "Equation of a Line (Point-Slope)",
+    "equation": "y - y_1 = m(x - x_1)",
+    "context": "Analytic geometry"
+  },
+  {
+    "name": "Volume of a Cylinder",
+    "equation": "V = \\pi r^2 h",
+    "context": "Geometry"
+  },
+  {
+    "name": "Volume of a Cone",
+    "equation": "V = \\frac{1}{3}\\pi r^2 h",
+    "context": "Geometry"
+  },
+  {
+    "name": "Volume of a Pyramid",
+    "equation": "V = \\frac{1}{3}Bh",
+    "context": "Geometry"
+  },
+  {
+    "name": "Surface Area of a Cylinder",
+    "equation": "\\text{SA} = 2\\pi r^2 + 2\\pi r h",
+    "context": "Geometry"
+  },
+  {
+    "name": "Law of Tangents",
+    "equation": "\\frac{a-b}{a+b} = \\frac{\\tan\\frac{1}{2}(A-B)}{\\tan\\frac{1}{2}(A+B)}",
+    "context": "Trigonometry"
+  },
+  {
+    "name": "Small Angle Approximations",
+    "equation": "\\sin\\theta \\approx \\theta, \\quad \\cos\\theta \\approx 1-\\frac{\\theta^2}{2}, \\quad \\tan\\theta \\approx \\theta",
+    "context": "Trigonometry"
+  },
+  {
+    "name": "Euclid's Lemma",
+    "equation": "p \\mid ab \\implies p \\mid a \\text{ or } p \\mid b \\quad (p \\text{ prime})",
+    "context": "Number theory"
+  },
+  {
+    "name": "Fundamental Theorem of Arithmetic",
+    "equation": "n = \\prod_i p_i^{a_i} \\quad \\text{(unique factorization)}",
+    "context": "Number theory"
+  },
+  {
+    "name": "Fermat's Little Theorem",
+    "equation": "a^p \\equiv a \\pmod{p}",
+    "context": "Number theory"
+  },
+  {
+    "name": "Fermat's Last Theorem",
+    "equation": "x^n + y^n = z^n \\text{ has no integer solutions for } n>2",
+    "context": "Number theory"
+  },
+  {
+    "name": "Euler's Totient Theorem",
+    "equation": "a^{\\varphi(n)} \\equiv 1 \\pmod{n} \\quad \\text{if } \\gcd(a,n)=1",
+    "context": "Number theory"
+  },
+  {
+    "name": "Euler's Totient Function",
+    "equation": "\\varphi(n) = n\\prod_{p|n}\\left(1 - \\frac{1}{p}\\right)",
+    "context": "Number theory"
+  },
+  {
+    "name": "Chinese Remainder Theorem",
+    "equation": "x \\equiv a \\pmod{m},\\; x \\equiv b \\pmod{n} \\text{ has unique solution mod } mn",
+    "context": "Number theory"
+  },
+  {
+    "name": "Quadratic Formula (mod p)",
+    "equation": "x = \\frac{-b \\pm \\sqrt{b^2-4ac}}{2a} \\pmod{p}",
+    "context": "Number theory"
+  },
+  {
+    "name": "Legendre Symbol",
+    "equation": "\\left(\\frac{a}{p}\\right) = a^{(p-1)/2} \\pmod{p}",
+    "context": "Number theory"
+  },
+  {
+    "name": "Law of Quadratic Reciprocity",
+    "equation": "\\left(\\frac{p}{q}\\right)\\left(\\frac{q}{p}\\right) = (-1)^{(p-1)(q-1)/4}",
+    "context": "Number theory"
+  },
+  {
+    "name": "Prime Number Theorem",
+    "equation": "\\pi(x) \\sim \\frac{x}{\\ln x}",
+    "context": "Number theory"
+  },
+  {
+    "name": "Möbius Function",
+    "equation": "\\mu(n) = 0 \\text{ if } n \\text{ has squared prime factor, else } (-1)^k",
+    "context": "Number theory"
+  },
+  {
+    "name": "Goldbach's Conjecture",
+    "equation": "\\text{Every even } n>2 \\text{ is sum of 2 primes}",
+    "context": "Number theory"
+  },
+  {
+    "name": "Twin Prime Conjecture",
+    "equation": "\\text{There are infinitely many } p \\text{ such that } p+2 \\text{ is prime}",
+    "context": "Number theory"
+  },
+  {
+    "name": "Dirichlet's Theorem",
+    "equation": "a, nd+a \\text{ contain infinitely many primes if } \\gcd(a,d)=1",
+    "context": "Number theory"
+  },
+  {
+    "name": "Riemann Hypothesis",
+    "equation": "\\text{All non-trivial zeros of } \\zeta(s) \\text{ have } \\operatorname{Re}(s) = \\frac{1}{2}",
+    "context": "Number theory"
+  },
+  {
+    "name": "ABC Conjecture",
+    "equation": "\\text{For } \\varepsilon>0,\\; \\operatorname{rad}(abc) < c^{1+\\varepsilon} \\text{ has finitely many coprime solutions}",
+    "context": "Number theory"
+  },
+  {
+    "name": "Perfect Number Formula",
+    "equation": "2^{p-1}(2^p - 1) \\text{ is perfect if } 2^p-1 \\text{ is prime}",
+    "context": "Number theory"
+  },
+  {
+    "name": "Triangular Number",
+    "equation": "T_n = \\frac{n(n+1)}{2}",
+    "context": "Number theory"
+  },
+  {
+    "name": "Sum of Squares (Lagrange)",
+    "equation": "\\text{Every } n \\text{ is sum of at most 4 squares}",
+    "context": "Number theory"
+  },
+  {
+    "name": "Bayes' Theorem",
+    "equation": "P(A|B) = \\frac{P(B|A)P(A)}{P(B)}",
+    "context": "Probability"
+  },
+  {
+    "name": "Law of Total Probability",
+    "equation": "P(B) = \\sum_i P(B|A_i)P(A_i)",
+    "context": "Probability"
+  },
+  {
+    "name": "Binomial Distribution",
+    "equation": "P(X=k) = \\binom{n}{k} p^k (1-p)^{n-k}",
+    "context": "Probability"
+  },
+  {
+    "name": "Poisson Distribution",
+    "equation": "P(X=k) = \\frac{\\lambda^k e^{-\\lambda}}{k!}",
+    "context": "Probability"
+  },
+  {
+    "name": "Normal Distribution PDF",
+    "equation": "f(x) = \\frac{1}{\\sigma\\sqrt{2\\pi}} e^{-(x-\\mu)^2/(2\\sigma^2)}",
+    "context": "Statistics"
+  },
+  {
+    "name": "Central Limit Theorem",
+    "equation": "\\frac{\\bar{X} - \\mu}{\\sigma/\\sqrt{n}} \\to N(0,1)",
+    "context": "Statistics"
+  },
+  {
+    "name": "Law of Large Numbers",
+    "equation": "\\bar{X}_n \\to \\mu \\quad \\text{as } n \\to \\infty",
+    "context": "Probability"
+  },
+  {
+    "name": "Chebyshev's Inequality",
+    "equation": "P(|X-\\mu| \\geq k\\sigma) \\leq \\frac{1}{k^2}",
+    "context": "Probability"
+  },
+  {
+    "name": "Markov's Inequality",
+    "equation": "P(X \\geq a) \\leq \\frac{\\mathbb{E}[X]}{a}",
+    "context": "Probability"
+  },
+  {
+    "name": "Exponential Distribution",
+    "equation": "f(x) = \\lambda e^{-\\lambda x}, \\quad x \\geq 0",
+    "context": "Probability"
+  },
+  {
+    "name": "Uniform Distribution",
+    "equation": "f(x) = \\frac{1}{b-a}, \\quad a \\leq x \\leq b",
+    "context": "Probability"
+  },
+  {
+    "name": "Chi-Squared Statistic",
+    "equation": "\\chi^2 = \\sum_i \\frac{(O_i - E_i)^2}{E_i}",
+    "context": "Statistics"
+  },
+  {
+    "name": "Student's t-Distribution",
+    "equation": "f(t) = \\frac{\\Gamma\\left(\\frac{\\nu+1}{2}\\right)}{\\sqrt{\\nu\\pi}\\,\\Gamma\\left(\\frac{\\nu}{2}\\right)} \\left(1 + \\frac{t^2}{\\nu}\\right)^{-(\\nu+1)/2}",
+    "context": "Statistics"
+  },
+  {
+    "name": "F-Distribution",
+    "equation": "f(F) \\propto F^{(d_1/2)-1} \\left(1 + \\frac{d_1F}{d_2}\\right)^{-(d_1+d_2)/2}",
+    "context": "Statistics"
+  },
+  {
+    "name": "Pearson Correlation",
+    "equation": "r = \\frac{\\sum_i (x_i - \\bar{x})(y_i - \\bar{y})}{n s_x s_y}",
+    "context": "Statistics"
+  },
+  {
+    "name": "Linear Regression",
+    "equation": "\\hat{y} = \\beta_0 + \\beta_1 x",
+    "context": "Statistics"
+  },
+  {
+    "name": "R-squared",
+    "equation": "R^2 = 1 - \\frac{\\text{SS}_{\\text{res}}}{\\text{SS}_{\\text{tot}}}",
+    "context": "Statistics"
+  },
+  {
+    "name": "Expected Value",
+    "equation": "\\mathbb{E}[X] = \\sum_i x_i P(X=x_i)",
+    "context": "Probability"
+  },
+  {
+    "name": "Moment Generating Function",
+    "equation": "M_X(t) = \\mathbb{E}[e^{tX}]",
+    "context": "Probability"
+  },
+  {
+    "name": "Gamma Distribution",
+    "equation": "f(x) = \\frac{x^{k-1} e^{-x/\\theta}}{\\theta^k \\Gamma(k)}",
+    "context": "Probability"
+  },
+  {
+    "name": "Beta Distribution",
+    "equation": "f(x) \\propto x^{\\alpha-1} (1-x)^{\\beta-1}",
+    "context": "Probability"
+  },
+  {
+    "name": "P-value (Definition)",
+    "equation": "p = P(\\text{data more extreme} \\mid H_0)",
+    "context": "Statistics"
+  },
+  {
+    "name": "Z-Score",
+    "equation": "z = \\frac{x - \\mu}{\\sigma}",
+    "context": "Statistics"
+  },
+  {
+    "name": "Standard Error",
+    "equation": "\\text{SE} = \\frac{\\sigma}{\\sqrt{n}}",
+    "context": "Statistics"
+  },
+  {
+    "name": "Confidence Interval (Mean)",
+    "equation": "\\text{CI} = \\bar{x} \\pm z^*\\frac{\\sigma}{\\sqrt{n}}",
+    "context": "Statistics"
+  },
+  {
+    "name": "pH Definition",
+    "equation": "\\text{pH} = -\\log_{10}[\\text{H}^+]",
+    "context": "Chemistry"
+  },
+  {
+    "name": "pOH Definition",
+    "equation": "\\text{pOH} = -\\log_{10}[\\text{OH}^-]",
+    "context": "Chemistry"
+  },
+  {
+    "name": "Autoionization of Water",
+    "equation": "K_w = [\\text{H}^+][\\text{OH}^-] = 10^{-14}",
+    "context": "Chemistry"
+  },
+  {
+    "name": "Henderson-Hasselbalch Equation",
+    "equation": "\\text{pH} = \\text{p}K_a + \\log\\left(\\frac{[\\text{A}^-]}{[\\text{HA}]}\\right)",
+    "context": "Chemistry"
+  },
+  {
+    "name": "Equilibrium Constant",
+    "equation": "K_{\\text{eq}} = \\frac{[\\text{C}]^c [\\text{D}]^d}{[\\text{A}]^a [\\text{B}]^b}",
+    "context": "Chemistry"
+  },
+  {
+    "name": "Reaction Quotient",
+    "equation": "Q = \\frac{[\\text{C}]^c [\\text{D}]^d}{[\\text{A}]^a [\\text{B}]^b}",
+    "context": "Chemistry"
+  },
+  {
+    "name": "Gibbs Free Energy (Chemical)",
+    "equation": "\\Delta G = \\Delta G^\\circ + RT \\ln Q",
+    "context": "Chemistry"
+  },
+  {
+    "name": "Arrhenius Equation (Chemical)",
+    "equation": "k = A e^{-E_a/RT}",
+    "context": "Chemical kinetics"
+  },
+  {
+    "name": "Rate Law",
+    "equation": "r = k[\\text{A}]^m [\\text{B}]^n",
+    "context": "Chemical kinetics"
+  },
+  {
+    "name": "Half-Life (First Order)",
+    "equation": "t_{1/2} = \\frac{\\ln 2}{k}",
+    "context": "Chemical kinetics"
+  },
+  {
+    "name": "Half-Life (Second Order)",
+    "equation": "t_{1/2} = \\frac{1}{k[\\text{A}]_0}",
+    "context": "Chemical kinetics"
+  },
+  {
+    "name": "Molarity",
+    "equation": "M = \\frac{\\text{moles solute}}{\\text{L solution}}",
+    "context": "Chemistry"
+  },
+  {
+    "name": "Dilution Formula",
+    "equation": "M_1 V_1 = M_2 V_2",
+    "context": "Chemistry"
+  },
+  {
+    "name": "Dalton's Law of Partial Pressures",
+    "equation": "P_{\\text{total}} = \\sum_i P_i",
+    "context": "Physical chemistry"
+  },
+  {
+    "name": "Raoult's Law",
+    "equation": "P_{\\text{solution}} = X_{\\text{solvent}} P^\\circ_{\\text{solvent}}",
+    "context": "Physical chemistry"
+  },
+  {
+    "name": "Henry's Law",
+    "equation": "C = k P_{\\text{gas}}",
+    "context": "Physical chemistry"
+  },
+  {
+    "name": "Van't Hoff Factor",
+    "equation": "\\Delta T_f = i K_f m",
+    "context": "Physical chemistry"
+  },
+  {
+    "name": "Boiling Point Elevation",
+    "equation": "\\Delta T_b = i K_b m",
+    "context": "Physical chemistry"
+  },
+  {
+    "name": "Freezing Point Depression",
+    "equation": "\\Delta T_f = i K_f m",
+    "context": "Physical chemistry"
+  },
+  {
+    "name": "Osmotic Pressure",
+    "equation": "\\Pi = i M R T",
+    "context": "Physical chemistry"
+  },
+  {
+    "name": "Born-Oppenheimer Approximation",
+    "equation": "\\Psi_{\\text{total}} \\approx \\Psi_{\\text{elec}} \\times \\Psi_{\\text{nuc}}",
+    "context": "Quantum chemistry"
+  },
+  {
+    "name": "Hückel's Rule",
+    "equation": "4n+2 \\; \\pi \\text{ electrons} \\to \\text{aromatic}",
+    "context": "Organic chemistry"
+  },
+  {
+    "name": "Percent Yield",
+    "equation": "\\% \\text{ yield} = \\frac{\\text{actual}}{\\text{theoretical}} \\times 100\\%",
+    "context": "Chemistry"
+  },
+  {
+    "name": "Beer-Lambert Law",
+    "equation": "A = \\varepsilon b c",
+    "context": "Analytical chemistry"
+  },
+  {
+    "name": "Bragg's Law",
+    "equation": "n\\lambda = 2d\\sin\\theta",
+    "context": "Crystallography"
+  },
+  {
+    "name": "Coulomb's Law (Chemical)",
+    "equation": "E = k_e \\frac{q_1 q_2}{r}",
+    "context": "Physical chemistry"
+  },
+  {
+    "name": "Mass Defect",
+    "equation": "\\Delta m = Z m_p + N m_n - M_{\\text{nucleus}}",
+    "context": "Nuclear chemistry"
+  },
+  {
+    "name": "Einstein Equation (Nuclear)",
+    "equation": "E_{\\text{binding}} = \\Delta m c^2",
+    "context": "Nuclear chemistry"
+  },
+  {
+    "name": "Radioactive Decay",
+    "equation": "N(t) = N_0 e^{-\\lambda t}",
+    "context": "Nuclear chemistry"
+  },
+  {
+    "name": "Activity (Curies)",
+    "equation": "A = \\lambda N",
+    "context": "Nuclear chemistry"
+  },
+  {
+    "name": "Lattice Energy (Born-Landé)",
+    "equation": "U = -\\frac{N_A M z^+ z^- e^2}{4\\pi\\varepsilon_0 r_0}\\left(1 - \\frac{1}{n}\\right)",
+    "context": "Physical chemistry"
+  },
+  {
+    "name": "Pauli Repulsion Energy",
+    "equation": "E_{\\text{rep}} = A e^{-Br}",
+    "context": "Physical chemistry"
+  },
+  {
+    "name": "Cubic Equation of State (van der Waals)",
+    "equation": "P = \\frac{RT}{V_m - b} - \\frac{a}{V_m^2}",
+    "context": "Physical chemistry"
+  },
+  {
+    "name": "Heat of Reaction",
+    "equation": "\\Delta H^\\circ = \\sum \\nu_i \\Delta H_f^\\circ(\\text{products}) - \\sum \\nu_i \\Delta H_f^\\circ(\\text{reactants})",
+    "context": "Thermochemistry"
+  },
+  {
+    "name": "Entropy Change (Reaction)",
+    "equation": "\\Delta S^\\circ = \\sum \\nu_i S^\\circ(\\text{products}) - \\sum \\nu_i S^\\circ(\\text{reactants})",
+    "context": "Thermochemistry"
+  },
+  {
+    "name": "Bernoulli's Principle",
+    "equation": "P + \\frac{1}{2}\\rho v^2 + \\rho g h = \\text{constant}",
+    "context": "Fluid dynamics"
+  },
+  {
+    "name": "Continuity Equation",
+    "equation": "A_1 v_1 = A_2 v_2",
+    "context": "Fluid dynamics"
+  },
+  {
+    "name": "Poiseuille's Law",
+    "equation": "Q = \\frac{\\pi r^4 \\Delta P}{8\\eta L}",
+    "context": "Fluid dynamics"
+  },
+  {
+    "name": "Reynolds Number",
+    "equation": "\\text{Re} = \\frac{\\rho v L}{\\eta}",
+    "context": "Fluid dynamics"
+  },
+  {
+    "name": "Pascal's Principle",
+    "equation": "\\Delta P = \\frac{F}{A}",
+    "context": "Fluid mechanics"
+  },
+  {
+    "name": "Archimedes' Principle",
+    "equation": "F_b = \\rho_{\\text{fluid}} \\, g \\, V_{\\text{displaced}}",
+    "context": "Fluid mechanics"
+  },
+  {
+    "name": "Hydrostatic Pressure",
+    "equation": "P = \\rho g h",
+    "context": "Fluid mechanics"
+  },
+  {
+    "name": "Surface Tension (Young-Laplace)",
+    "equation": "\\Delta P = \\gamma\\left(\\frac{1}{R_1} + \\frac{1}{R_2}\\right)",
+    "context": "Fluid mechanics"
+  },
+  {
+    "name": "Capillary Rise",
+    "equation": "h = \\frac{2\\gamma\\cos\\theta}{\\rho g r}",
+    "context": "Fluid mechanics"
+  },
+  {
+    "name": "Stokes' Law (Sedimentation)",
+    "equation": "v_t = \\frac{2r^2(\\rho_p - \\rho_f)g}{9\\eta}",
+    "context": "Fluid dynamics"
+  },
+  {
+    "name": "Navier-Stokes Equation",
+    "equation": "\\rho\\left(\\frac{\\partial \\mathbf{v}}{\\partial t} + \\mathbf{v} \\cdot \\nabla \\mathbf{v}\\right) = -\\nabla P + \\eta \\nabla^2 \\mathbf{v} + \\mathbf{f}",
+    "context": "Fluid dynamics"
+  },
+  {
+    "name": "Drag Coefficient (Sphere)",
+    "equation": "C_d = \\frac{24}{\\text{Re}} \\quad \\text{for } \\text{Re} \\ll 1",
+    "context": "Fluid dynamics"
+  },
+  {
+    "name": "Blasius Friction Factor",
+    "equation": "f = 0.316\\,\\text{Re}^{-0.25}",
+    "context": "Fluid dynamics"
+  },
+  {
+    "name": "Darcy-Weisbach Equation",
+    "equation": "h_f = f\\frac{L}{D}\\frac{v^2}{2g}",
+    "context": "Fluid dynamics"
+  },
+  {
+    "name": "Hagen-Poiseuille Velocity Profile",
+    "equation": "v(r) = \\frac{\\Delta P R^2}{4\\eta L}\\left(1 - \\frac{r^2}{R^2}\\right)",
+    "context": "Fluid dynamics"
+  },
+  {
+    "name": "Mach Number",
+    "equation": "M = \\frac{v}{v_{\\text{sound}}}",
+    "context": "Compressible flow"
+  },
+  {
+    "name": "Euler Equations (Inviscid Flow)",
+    "equation": "\\frac{\\partial \\mathbf{v}}{\\partial t} + \\mathbf{v} \\cdot \\nabla \\mathbf{v} = -\\frac{\\nabla P}{\\rho}",
+    "context": "Fluid dynamics"
+  },
+  {
+    "name": "Kutta-Joukowski Theorem",
+    "equation": "L = \\rho v \\Gamma",
+    "context": "Aerodynamics"
+  },
+  {
+    "name": "Prandtl Number",
+    "equation": "\\Pr = \\frac{\\nu}{\\alpha}",
+    "context": "Heat transfer"
+  },
+  {
+    "name": "Nusselt Number",
+    "equation": "\\text{Nu} = \\frac{hL}{k_f}",
+    "context": "Heat transfer"
+  },
+  {
+    "name": "Wave Equation (1D)",
+    "equation": "\\frac{\\partial^2 y}{\\partial x^2} = \\frac{1}{v^2}\\frac{\\partial^2 y}{\\partial t^2}",
+    "context": "Wave physics"
+  },
+  {
+    "name": "Wave Speed",
+    "equation": "v = f\\lambda",
+    "context": "Wave physics"
+  },
+  {
+    "name": "Doppler Effect (Sound)",
+    "equation": "f' = f \\frac{v_{\\text{snd}} \\pm v_{\\text{obs}}}{v_{\\text{snd}} \\mp v_{\\text{src}}}",
+    "context": "Wave physics"
+  },
+  {
+    "name": "Snell's Law",
+    "equation": "n_1 \\sin\\theta_1 = n_2 \\sin\\theta_2",
+    "context": "Optics"
+  },
+  {
+    "name": "Lensmaker's Equation",
+    "equation": "\\frac{1}{f} = (n-1)\\left(\\frac{1}{R_1} - \\frac{1}{R_2}\\right)",
+    "context": "Optics"
+  },
+  {
+    "name": "Thin Lens Equation",
+    "equation": "\\frac{1}{f} = \\frac{1}{d_o} + \\frac{1}{d_i}",
+    "context": "Optics"
+  },
+  {
+    "name": "Magnification",
+    "equation": "M = -\\frac{d_i}{d_o}",
+    "context": "Optics"
+  },
+  {
+    "name": "Critical Angle",
+    "equation": "\\theta_c = \\sin^{-1}\\left(\\frac{n_2}{n_1}\\right)",
+    "context": "Optics"
+  },
+  {
+    "name": "Brewster's Angle",
+    "equation": "\\theta_B = \\arctan\\left(\\frac{n_2}{n_1}\\right)",
+    "context": "Optics"
+  },
+  {
+    "name": "Diffraction Grating",
+    "equation": "d\\sin\\theta = m\\lambda",
+    "context": "Optics"
+  },
+  {
+    "name": "Single Slit Minima",
+    "equation": "a\\sin\\theta = m\\lambda",
+    "context": "Optics"
+  },
+  {
+    "name": "Double Slit Maxima",
+    "equation": "d\\sin\\theta = m\\lambda",
+    "context": "Optics"
+  },
+  {
+    "name": "Rayleigh Criterion",
+    "equation": "\\theta = 1.22\\, \\frac{\\lambda}{D}",
+    "context": "Optics"
+  },
+  {
+    "name": "Malus' Law",
+    "equation": "I = I_0 \\cos^2\\theta",
+    "context": "Optics"
+  },
+  {
+    "name": "Beer-Lambert (Optics)",
+    "equation": "I = I_0 e^{-\\alpha x}",
+    "context": "Optics"
+  },
+  {
+    "name": "Standing Wave Frequency",
+    "equation": "f_n = \\frac{n v}{2L}",
+    "context": "Wave physics"
+  },
+  {
+    "name": "Beat Frequency",
+    "equation": "f_{\\text{beat}} = |f_1 - f_2|",
+    "context": "Wave physics"
+  },
+  {
+    "name": "Group Velocity",
+    "equation": "v_g = \\frac{d\\omega}{dk}",
+    "context": "Wave physics"
+  },
+  {
+    "name": "Phase Velocity",
+    "equation": "v_p = \\frac{\\omega}{k}",
+    "context": "Wave physics"
+  },
+  {
+    "name": "Intensity (Sound)",
+    "equation": "\\beta = 10\\log_{10}\\left(\\frac{I}{I_0}\\right) \\text{ dB}",
+    "context": "Acoustics"
+  },
+  {
+    "name": "Standard Model Lagrangian",
+    "equation": "\\mathcal{L}_{\\text{SM}} = \\mathcal{L}_{\\text{gauge}} + \\mathcal{L}_{\\text{fermion}} + \\mathcal{L}_{\\text{Higgs}} + \\mathcal{L}_{\\text{Yukawa}}",
+    "context": "Particle physics"
+  },
+  {
+    "name": "Running Coupling Constant (QCD)",
+    "equation": "\\alpha_s(Q^2) = \\frac{12\\pi}{(33-2n_f)\\ln(Q^2/\\Lambda^2)}",
+    "context": "Particle physics"
+  },
+  {
+    "name": "Mandelstam Variables",
+    "equation": "s+t+u = \\sum_i m_i^2",
+    "context": "Particle physics"
+  },
+  {
+    "name": "Weinberg Angle",
+    "equation": "\\sin^2\\theta_W \\approx 0.2312",
+    "context": "Particle physics"
+  },
+  {
+    "name": "Nuclear Binding Energy",
+    "equation": "B = (Zm_H + Nm_n - m_A)c^2",
+    "context": "Nuclear physics"
+  },
+  {
+    "name": "Semi-Empirical Mass Formula",
+    "equation": "B = a_v A - a_s A^{2/3} - a_c \\frac{Z^2}{A^{1/3}} - a_a \\frac{(A-2Z)^2}{A} \\pm \\delta",
+    "context": "Nuclear physics"
+  },
+  {
+    "name": "Neutron Cross Section",
+    "equation": "\\sigma = \\pi R^2 \\quad \\text{for direct reactions}",
+    "context": "Nuclear physics"
+  },
+  {
+    "name": "Gamow Factor",
+    "equation": "P = e^{-2\\pi\\eta}, \\quad \\eta = \\frac{Z_1 Z_2 \\alpha}{\\beta}",
+    "context": "Nuclear physics"
+  },
+  {
+    "name": "Q-Value of Reaction",
+    "equation": "Q = (m_{\\text{initial}} - m_{\\text{final}})c^2",
+    "context": "Nuclear physics"
+  },
+  {
+    "name": "Fission Energy",
+    "equation": "E_{\\text{fiss}} \\approx 200\\text{ MeV per }^{235}\\text{U fission}",
+    "context": "Nuclear physics"
+  },
+  {
+    "name": "Fusion Cross Section",
+    "equation": "\\sigma(E) \\propto \\frac{1}{E} e^{-\\sqrt{E_G/E}}",
+    "context": "Nuclear physics"
+  },
+  {
+    "name": "W and Z Boson Masses",
+    "equation": "m_W \\approx 80.4\\text{ GeV}/c^2, \\quad m_Z \\approx 91.2\\text{ GeV}/c^2",
+    "context": "Particle physics"
+  },
+  {
+    "name": "Higgs Vacuum Expectation Value",
+    "equation": "v \\approx 246\\text{ GeV}",
+    "context": "Particle physics"
+  },
+  {
+    "name": "Cabibbo Angle",
+    "equation": "\\theta_c \\approx 13^\\circ, \\quad V_{us} = \\sin\\theta_c",
+    "context": "Particle physics"
+  },
+  {
+    "name": "CP Violation Parameter",
+    "equation": "\\varepsilon_K \\approx 2.3 \\times 10^{-3}",
+    "context": "Particle physics"
+  },
+  {
+    "name": "Neutrino Oscillation Probability",
+    "equation": "P(\\nu_\\alpha \\to \\nu_\\beta) = \\sin^2 2\\theta \\sin^2\\left(\\frac{\\Delta m^2 L}{4E}\\right)",
+    "context": "Particle physics"
+  },
+  {
+    "name": "Baryon Number Conservation",
+    "equation": "\\Delta B = 0 \\quad \\text{(in Standard Model)}",
+    "context": "Particle physics"
+  },
+  {
+    "name": "Lepton Universality",
+    "equation": "g_\\mu = g_\\tau = g_e",
+    "context": "Particle physics"
+  },
+  {
+    "name": "Cross Section (Scattering)",
+    "equation": "\\frac{d\\sigma}{d\\Omega} = |f(\\Omega)|^2",
+    "context": "Scattering theory"
+  },
+  {
+    "name": "Deep Inelastic Scattering",
+    "equation": "F_2(x,Q^2) = \\sum_i e_i^2 x f_i(x,Q^2)",
+    "context": "Particle physics"
+  },
+  {
+    "name": "Hardy-Weinberg Equilibrium",
+    "equation": "p^2 + 2pq + q^2 = 1",
+    "context": "Population genetics"
+  },
+  {
+    "name": "Population Growth (Malthus)",
+    "equation": "\\frac{dN}{dt} = rN",
+    "context": "Ecology"
+  },
+  {
+    "name": "Logistic Growth (Ecology)",
+    "equation": "\\frac{dN}{dt} = rN\\left(1 - \\frac{N}{K}\\right)",
+    "context": "Ecology"
+  },
+  {
+    "name": "Lotka-Volterra (Predator-Prey)",
+    "equation": "\\frac{dx}{dt} = \\alpha x - \\beta xy, \\quad \\frac{dy}{dt} = \\delta xy - \\gamma y",
+    "context": "Ecology"
+  },
+  {
+    "name": "Michaelis-Menten Kinetics",
+    "equation": "v = \\frac{V_{\\max}[S]}{K_M + [S]}",
+    "context": "Enzyme kinetics"
+  },
+  {
+    "name": "Lineweaver-Burk Plot",
+    "equation": "\\frac{1}{v} = \\frac{K_M}{V_{\\max}} \\frac{1}{[S]} + \\frac{1}{V_{\\max}}",
+    "context": "Enzyme kinetics"
+  },
+  {
+    "name": "Nernst Equation (Biology)",
+    "equation": "E_{\\text{ion}} = \\frac{RT}{zF} \\ln\\left(\\frac{[\\text{out}]}{[\\text{in}]}\\right)",
+    "context": "Neurobiology"
+  },
+  {
+    "name": "Goldman-Hodgkin-Katz Equation",
+    "equation": "V_m = \\frac{RT}{F} \\ln\\left(\\frac{P_K[\\text{K}]_o + P_{\\text{Na}}[\\text{Na}]_o + P_{\\text{Cl}}[\\text{Cl}]_i}{P_K[\\text{K}]_i + P_{\\text{Na}}[\\text{Na}]_i + P_{\\text{Cl}}[\\text{Cl}]_o}\\right)",
+    "context": "Neurobiology"
+  },
+  {
+    "name": "Hodgkin-Huxley Model",
+    "equation": "I = C_m\\frac{dV}{dt} + g_K n^4(V-V_K) + g_{\\text{Na}} m^3 h(V-V_{\\text{Na}}) + g_L(V-V_L)",
+    "context": "Neurobiology"
+  },
+  {
+    "name": "Fick's Law (Diffusion in Biology)",
+    "equation": "J = -DA\\frac{dC}{dx}",
+    "context": "Biophysics"
+  },
+  {
+    "name": "Allometric Scaling",
+    "equation": "Y = Y_0 M^b",
+    "context": "Biology"
+  },
+  {
+    "name": "Kleiber's Law",
+    "equation": "\\text{BMR} \\propto M^{3/4}",
+    "context": "Biology"
+  },
+  {
+    "name": "Species-Area Relationship",
+    "equation": "S = cA^z",
+    "context": "Ecology"
+  },
+  {
+    "name": "Inverse Square Law (Radiation)",
+    "equation": "I = \\frac{I_0}{4\\pi r^2}",
+    "context": "Biophysics"
+  },
+  {
+    "name": "Cell Growth Rate",
+    "equation": "N(t) = N_0 e^{\\mu t}",
+    "context": "Microbiology"
+  },
+  {
+    "name": "Mendel's Law of Segregation",
+    "equation": "P(\\text{Aa} \\times \\text{Aa}) = 1:2:1 \\text{ genotypic ratio}",
+    "context": "Genetics"
+  },
+  {
+    "name": "Fisher's Fundamental Theorem",
+    "equation": "\\frac{\\partial \\bar{W}}{\\partial t} = \\operatorname{Var}(W)",
+    "context": "Population genetics"
+  },
+  {
+    "name": "Cardiac Output (Fick Principle)",
+    "equation": "\\text{CO} = \\frac{\\text{VO}_2}{C_a - C_v}",
+    "context": "Physiology"
+  },
+  {
+    "name": "Blood Flow (Ohm's Law analogue)",
+    "equation": "\\text{CO} = \\frac{\\text{MAP} - \\text{CVP}}{\\text{TPR}}",
+    "context": "Physiology"
+  },
+  {
+    "name": "Electric Field of Membrane",
+    "equation": "\\mathbf{E} = -\\nabla V_m",
+    "context": "Biophysics"
+  },
+  {
+    "name": "Effective Temperature of Earth",
+    "equation": "T_e = \\left(\\frac{(1-\\alpha)S}{4\\sigma}\\right)^{1/4}",
+    "context": "Climate science"
+  },
+  {
+    "name": "Greenhouse Effect",
+    "equation": "T_s = T_e + \\Delta T_{\\text{greenhouse}}",
+    "context": "Climate science"
+  },
+  {
+    "name": "Clausius-Clapeyron (Atmosphere)",
+    "equation": "e_s(T) = e_{s0} \\exp\\left(\\frac{L_v}{R_v}\\left(\\frac{1}{T_0} - \\frac{1}{T}\\right)\\right)",
+    "context": "Atmospheric science"
+  },
+  {
+    "name": "Barometric Formula",
+    "equation": "P(h) = P_0 e^{-Mgh/RT}",
+    "context": "Atmospheric science"
+  },
+  {
+    "name": "Hydrostatic Balance (Atmosphere)",
+    "equation": "\\frac{dP}{dz} = -\\rho g",
+    "context": "Atmospheric science"
+  },
+  {
+    "name": "Richardson Number",
+    "equation": "\\text{Ri} = \\frac{N^2}{(du/dz)^2}",
+    "context": "Atmospheric science"
+  },
+  {
+    "name": "Coriolis Parameter",
+    "equation": "f = 2\\Omega \\sin\\phi",
+    "context": "Geophysical fluid dynamics"
+  },
+  {
+    "name": "Rossby Wave Dispersion",
+    "equation": "\\omega = -\\frac{\\beta k}{k^2 + l^2}",
+    "context": "Geophysical fluid dynamics"
+  },
+  {
+    "name": "Geostrophic Balance",
+    "equation": "f v = \\frac{1}{\\rho}\\frac{\\partial P}{\\partial x}",
+    "context": "Meteorology"
+  },
+  {
+    "name": "Ekman Spiral",
+    "equation": "u = V_0 e^{z/D}\\cos\\left(\\frac{\\pi}{4} - \\frac{z}{D}\\right),\\; v = V_0 e^{z/D}\\sin\\left(\\frac{\\pi}{4} - \\frac{z}{D}\\right)",
+    "context": "Oceanography"
+  },
+  {
+    "name": "Sverdrup Transport",
+    "equation": "V = \\frac{1}{\\beta}\\frac{\\partial \\tau}{\\partial x}",
+    "context": "Oceanography"
+  },
+  {
+    "name": "Dry Adiabatic Lapse Rate",
+    "equation": "\\Gamma_d = \\frac{g}{c_p} \\approx 9.8\\text{ K/km}",
+    "context": "Meteorology"
+  },
+  {
+    "name": "Froude Number",
+    "equation": "\\text{Fr} = \\frac{v}{\\sqrt{gh}}",
+    "context": "Open channel flow"
+  },
+  {
+    "name": "Stommel's Gyre Model",
+    "equation": "\\frac{dv}{dt} + \\beta y v = -\\frac{\\nabla P}{\\rho} + \\frac{\\tau}{\\rho H}",
+    "context": "Oceanography"
+  },
+  {
+    "name": "Insolation at Top of Atmosphere",
+    "equation": "S_{\\text{avg}} = \\frac{S_0}{4} \\approx 340\\text{ W/m}^2",
+    "context": "Climate science"
+  },
+  {
+    "name": "Supply and Demand Equilibrium",
+    "equation": "Q_d = Q_s \\quad \\text{at equilibrium price}",
+    "context": "Microeconomics"
+  },
+  {
+    "name": "Price Elasticity",
+    "equation": "\\varepsilon = \\frac{\\%\\Delta Q}{\\%\\Delta P}",
+    "context": "Microeconomics"
+  },
+  {
+    "name": "Utility Maximization",
+    "equation": "\\text{MRS} = \\frac{MU_x}{MU_y} = \\frac{P_x}{P_y}",
+    "context": "Microeconomics"
+  },
+  {
+    "name": "Budget Constraint",
+    "equation": "P_x X + P_y Y = I",
+    "context": "Microeconomics"
+  },
+  {
+    "name": "Cobb-Douglas Production Function",
+    "equation": "Y = A K^{\\alpha} L^{1-\\alpha}",
+    "context": "Macroeconomics"
+  },
+  {
+    "name": "Marginal Product of Labor",
+    "equation": "\\text{MP}_L = \\frac{\\partial Y}{\\partial L}",
+    "context": "Microeconomics"
+  },
+  {
+    "name": "Solow Growth Model",
+    "equation": "\\dot{k} = s f(k) - (n+\\delta)k",
+    "context": "Macroeconomics"
+  },
+  {
+    "name": "Quantity Theory of Money",
+    "equation": "MV = PY",
+    "context": "Macroeconomics"
+  },
+  {
+    "name": "Fisher Equation",
+    "equation": "i = r + \\pi",
+    "context": "Macroeconomics"
+  },
+  {
+    "name": "Phillips Curve",
+    "equation": "\\pi = \\pi_e - \\beta(u - u_n)",
+    "context": "Macroeconomics"
+  },
+  {
+    "name": "Lerner Index",
+    "equation": "L = \\frac{P - MC}{P} = -\\frac{1}{\\varepsilon}",
+    "context": "Industrial organization"
+  },
+  {
+    "name": "Consumer Surplus",
+    "equation": "\\text{CS} = \\int_0^Q (P_d(Q) - P)\\,dQ",
+    "context": "Microeconomics"
+  },
+  {
+    "name": "Profit Maximization",
+    "equation": "\\text{MR} = \\text{MC}",
+    "context": "Microeconomics"
+  },
+  {
+    "name": "IS-LM Equilibrium",
+    "equation": "Y = C(Y-T) + I(r) + G, \\quad \\frac{M}{P} = L(r,Y)",
+    "context": "Macroeconomics"
+  },
+  {
+    "name": "Solow Residual (TFP)",
+    "equation": "\\frac{\\dot{A}}{A} = \\frac{\\dot{Y}}{Y} - \\alpha\\frac{\\dot{K}}{K} - (1-\\alpha)\\frac{\\dot{L}}{L}",
+    "context": "Macroeconomics"
+  },
+  {
+    "name": "Shannon Entropy",
+    "equation": "H = -\\sum_i p_i \\log_2(p_i)",
+    "context": "Information theory"
+  },
+  {
+    "name": "Mutual Information",
+    "equation": "I(X;Y) = H(X) - H(X|Y)",
+    "context": "Information theory"
+  },
+  {
+    "name": "Channel Capacity (AWGN)",
+    "equation": "C = B \\log_2\\left(1 + \\frac{S}{N}\\right)",
+    "context": "Information theory"
+  },
+  {
+    "name": "Algorithm Complexity (Big-O)",
+    "equation": "T(n) = O(f(n)) \\iff \\exists c,k: T(n) \\leq c\\cdot f(n)\\; \\forall n>k",
+    "context": "Computer science"
+  },
+  {
+    "name": "Master Theorem",
+    "equation": "T(n) = aT(n/b) + f(n) \\implies T(n) = \\Theta(n^{\\log_b a}) \\text{ if } f(n)=O(n^{\\log_b a-\\varepsilon})",
+    "context": "Algorithm analysis"
+  },
+  {
+    "name": "Binary Search Complexity",
+    "equation": "T(n) = O(\\log n)",
+    "context": "Algorithm analysis"
+  },
+  {
+    "name": "Quicksort Average Complexity",
+    "equation": "T(n) = O(n\\log n)",
+    "context": "Algorithm analysis"
+  },
+  {
+    "name": "Turing Machine Halting Problem",
+    "equation": "\\text{No algorithm can determine if TM halts}",
+    "context": "Computability"
+  },
+  {
+    "name": "P vs NP",
+    "equation": "P \\subseteq NP, \\quad P \\neq NP \\text{ is unproven}",
+    "context": "Computational complexity"
+  },
+  {
+    "name": "Amdahl's Law",
+    "equation": "S_{\\max} = \\frac{1}{(1-P) + P/N}",
+    "context": "Parallel computing"
+  },
+  {
+    "name": "Bayes Classifier",
+    "equation": "\\hat{y} = \\arg\\max_y P(y|\\mathbf{x}) = \\arg\\max_y P(\\mathbf{x}|y)P(y)",
+    "context": "Machine learning"
+  },
+  {
+    "name": "Cross-Entropy Loss",
+    "equation": "L = -\\sum_i y_i \\log(\\hat{y}_i)",
+    "context": "Machine learning"
+  },
+  {
+    "name": "Kullback-Leibler Divergence",
+    "equation": "D_{\\text{KL}}(P \\| Q) = \\sum_i P(i) \\log\\left(\\frac{P(i)}{Q(i)}\\right)",
+    "context": "Information theory"
+  },
+  {
+    "name": "Gradient Descent Update",
+    "equation": "\\theta_{t+1} = \\theta_t - \\eta \\nabla_\\theta J(\\theta_t)",
+    "context": "Machine learning"
+  },
+  {
+    "name": "Backpropagation (Chain Rule)",
+    "equation": "\\frac{\\partial L}{\\partial w_{ij}^{(l)}} = \\frac{\\partial L}{\\partial a_j^{(l)}} \\frac{\\partial a_j^{(l)}}{\\partial z_j^{(l)}} \\frac{\\partial z_j^{(l)}}{\\partial w_{ij}^{(l)}}",
+    "context": "Machine learning"
+  },
+  {
+    "name": "Euler-Bernoulli Beam Equation",
+    "equation": "EI\\frac{d^4w}{dx^4} = q(x)",
+    "context": "Structural engineering"
+  },
+  {
+    "name": "Euler Buckling Load",
+    "equation": "F_{cr} = \\frac{\\pi^2 EI}{(KL)^2}",
+    "context": "Structural engineering"
+  },
+  {
+    "name": "Specific Impulse",
+    "equation": "I_{sp} = \\frac{F}{\\dot{m} g_0}",
+    "context": "Aerospace engineering"
+  },
+  {
+    "name": "Tsiolkovsky Rocket Equation",
+    "equation": "\\frac{m_f}{m_0} = e^{-\\Delta v/v_e}",
+    "context": "Astronautics"
+  },
+  {
+    "name": "Factor of Safety",
+    "equation": "\\text{FoS} = \\frac{\\sigma_{\\text{ultimate}}}{\\sigma_{\\text{allowable}}}",
+    "context": "Engineering design"
+  }
+]

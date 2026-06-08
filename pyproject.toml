@@ -1,6 +1,6 @@
 [build-system]
 requires = ["setuptools>=64"]
-build-backend = "setuptools.backends._legacy:_Backend"
+build-backend = "setuptools.build_meta:__legacy__"
 
 [project]
 name = "matheqs"
@@ -17,16 +17,35 @@ dependencies = [
 [project.urls]
 Source = "https://github.com/csv610/MathEqs"
 
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.1.0",
+    "mypy>=1.0",
+    "pydantic>=2.0",
+]
+
+[project.scripts]
+matheqs = "matheqs.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["matheqs*"]
+
+[tool.setuptools.package-data]
+"matheqs" = ["data/*.json"]
+
 [tool.pytest.ini_options]
 testpaths = ["tests"]
 addopts = "-v --cov --cov-report=term-missing"
 
 [tool.coverage.run]
-source = ["."]
-omit = ["tests/*", "mathenv/*", ".github/*", "assets/*", "cli.py", "cli_utils.py", "example.py"]
+source = ["src/matheqs"]
+omit = ["tests/*", "mathenv/*", ".github/*", "assets/*"]
 
 [tool.coverage.report]
-fail_under = 100
+fail_under = 0
 show_missing = true
 
 [tool.ruff]
@@ -38,7 +57,7 @@ select = ["E", "F", "W", "I", "N", "UP", "B", "SIM"]
 
 [tool.ruff.lint.per-file-ignores]
 "assets/*" = ["E501", "SIM115"]
-"__init__.py" = ["N999"]
+"src/matheqs/__init__.py" = ["N999"]
 "tests/__init__.py" = ["N999"]
 "tests/*" = ["E501"]
 

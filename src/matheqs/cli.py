@@ -9,7 +9,7 @@ import sys
 
 from dotenv import load_dotenv
 
-from cli_utils import (
+from matheqs.cli_utils import (
     generate_four_section_markdown,
     generate_markdown_document,
     print_error,
@@ -20,8 +20,8 @@ from cli_utils import (
     print_text,
     save_markdown_file,
 )
-from equation_explainer import PhysicsEquationExplainer
-from models import (
+from matheqs.equation_explainer import PhysicsEquationExplainer
+from matheqs.models import (
     EquationModel,
 )
 

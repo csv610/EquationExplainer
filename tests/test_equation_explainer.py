@@ -3,8 +3,8 @@ from unittest.mock import MagicMock, patch
 
 import pytest
 
-from equation_explainer import PhysicsEquationExplainer
-from models import EquationExplanation, EquationModel
+from matheqs.equation_explainer import PhysicsEquationExplainer
+from matheqs.models import EquationExplanation, EquationModel
 
 
 class TestPhysicsEquationExplainer:
@@ -133,7 +133,7 @@ class TestPhysicsEquationExplainer:
 
     @patch('litellm.completion')
     def test_get_history(self, mock_completion):
-        from models import HistoryModel
+        from matheqs.models import HistoryModel
         mock_response = MagicMock()
         mock_history = HistoryModel(
             year_discovered=1687,
@@ -154,7 +154,7 @@ class TestPhysicsEquationExplainer:
 
     @patch('litellm.completion')
     def test_get_derivation(self, mock_completion):
-        from models import DerivationModel, DerivationStep
+        from matheqs.models import DerivationModel, DerivationStep
         mock_response = MagicMock()
         mock_derivation = DerivationModel(
             starting_principles=["Work-energy theorem"],
@@ -248,8 +248,8 @@ class TestPhysicsEquationExplainer:
             raise FakeAuthError("Bad key")
 
         with (
-            patch('equation_explainer.litellm.AuthenticationError', FakeAuthError),
-            patch('equation_explainer.litellm.completion', side_effect=_fail_once),
+            patch('matheqs.equation_explainer.litellm.AuthenticationError', FakeAuthError),
+            patch('matheqs.equation_explainer.litellm.completion', side_effect=_fail_once),
         ):
                 explainer = PhysicsEquationExplainer(max_retries=3)
                 equation = EquationModel(name="Test", equation="x = y")
@@ -263,8 +263,9 @@ class TestPhysicsEquationExplainer:
         assert len(equations) > 0
         assert "Newton's Second Law" in equations
 
-    def test_available_equations_count(self):
-        assert len(PhysicsEquationExplainer.get_available_equations()) == 10
+    def test_available_equations_contains_known(self):
+        assert "Newton's Second Law" in PhysicsEquationExplainer.get_available_equations()
+        assert "Einstein's Mass-Energy Equivalence" in PhysicsEquationExplainer.get_available_equations()
 
     def test_pseudoscience_keywords(self):
         keywords = PhysicsEquationExplainer.get_pseudoscience_keywords()
@@ -283,8 +284,8 @@ class TestPhysicsEquationExplainer:
             raise FakeRateLimitError("rate limit")
 
         with (
-            patch('equation_explainer.litellm.RateLimitError', FakeRateLimitError),
-            patch('equation_explainer.litellm.completion', side_effect=_fail),
+            patch('matheqs.equation_explainer.litellm.RateLimitError', FakeRateLimitError),
+            patch('matheqs.equation_explainer.litellm.completion', side_effect=_fail),
         ):
                 explainer = PhysicsEquationExplainer(max_retries=2)
                 equation = EquationModel(name="Test", equation="x = y")
@@ -304,9 +305,9 @@ class TestPhysicsEquationExplainer:
             raise FakeAPIError("connection error")
 
         with (
-            patch('equation_explainer.litellm.APIConnectionError', FakeAPIError),
-            patch('equation_explainer.litellm.ServiceUnavailableError', FakeAPIError),
-            patch('equation_explainer.litellm.completion', side_effect=_fail),
+            patch('matheqs.equation_explainer.litellm.APIConnectionError', FakeAPIError),
+            patch('matheqs.equation_explainer.litellm.ServiceUnavailableError', FakeAPIError),
+            patch('matheqs.equation_explainer.litellm.completion', side_effect=_fail),
         ):
                     explainer = PhysicsEquationExplainer(max_retries=2)
                     equation = EquationModel(name="Test", equation="x = y")
@@ -326,8 +327,8 @@ class TestPhysicsEquationExplainer:
             raise FakeTimeoutError("timeout")
 
         with (
-            patch('equation_explainer.litellm.Timeout', FakeTimeoutError),
-            patch('equation_explainer.litellm.completion', side_effect=_fail),
+            patch('matheqs.equation_explainer.litellm.Timeout', FakeTimeoutError),
+            patch('matheqs.equation_explainer.litellm.completion', side_effect=_fail),
         ):
                 explainer = PhysicsEquationExplainer(max_retries=2)
                 equation = EquationModel(name="Test", equation="x = y")

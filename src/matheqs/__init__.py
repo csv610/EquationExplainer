@@ -1,7 +1,7 @@
 __version__ = "1.0.0"
 
-from equation_explainer import PhysicsEquationExplainer
-from models import (
+from matheqs.equation_explainer import PhysicsEquationExplainer
+from matheqs.models import (
     ApplicationModel,
     DerivationModel,
     DerivationStep,

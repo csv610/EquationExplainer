@@ -1,7 +1,7 @@
 """Tests for Pydantic models"""
 import pytest
 
-from models import (
+from matheqs.models import (
     ApplicationModel,
     DerivationModel,
     DerivationStep,

@@ -1,10 +1,12 @@
+import json
 import logging
 import time
+from pathlib import Path
 from typing import TypeVar, cast
 
 import litellm
 
-from models import (
+from matheqs.models import (
     DerivationModel,
     EquationExplanation,
     EquationModel,
@@ -174,18 +176,14 @@ class PhysicsEquationExplainer:
 
     @staticmethod
     def get_available_equations() -> list[str]:
-        return [
-            "Newton's Second Law",
-            "Einstein's Mass-Energy Equivalence",
-            "Schrödinger's Equation",
-            "Wave Equation",
-            "Heat Conduction Equation",
-            "Maxwell's Equations",
-            "Ohm's Law",
-            "Ideal Gas Law",
-            "Universal Law of Gravitation",
-            "Coulomb's Law",
-        ]
+        data_dir = Path(__file__).resolve().parent / "data"
+        json_path = data_dir / "equations.json"
+        if not json_path.exists():
+            logger.warning("Equations data file not found at %s", json_path)
+            return []
+        with open(json_path, encoding="utf-8") as f:
+            equations = json.load(f)
+        return [eq["name"] for eq in equations]
 
     @staticmethod
     def get_pseudoscience_keywords() -> list[str]:

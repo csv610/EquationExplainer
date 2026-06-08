@@ -2,7 +2,7 @@
 import os
 from unittest.mock import patch
 
-from cli import _format_year, _parse_global_flags, create_parser
+from matheqs.cli import _format_year, _parse_global_flags, create_parser
 
 
 class TestParseGlobalFlags:
@@ -33,20 +33,20 @@ class TestFormatYear:
 
 class TestApiKeyCheck:
     def test_no_warning_for_ollama(self):
-        with patch("cli.os.environ", {}):
-            from cli import _check_api_key
+        with patch("matheqs.cli.os.environ", {}):
+            from matheqs.cli import _check_api_key
             _check_api_key("ollama/gemma4")
 
     def test_warning_when_no_keys_set(self, capsys):
-        with patch("cli.os.environ", {}):
-            from cli import _check_api_key
+        with patch("matheqs.cli.os.environ", {}):
+            from matheqs.cli import _check_api_key
             _check_api_key("gpt-4o")
             captured = capsys.readouterr()
             assert "No API keys found" in captured.out
 
     def test_no_warning_when_key_set(self, capsys):
         with patch.dict(os.environ, {"OPENAI_API_KEY": "sk-test"}):
-            from cli import _check_api_key
+            from matheqs.cli import _check_api_key
             _check_api_key("gpt-4o")
             captured = capsys.readouterr()
             assert captured.out == ""
